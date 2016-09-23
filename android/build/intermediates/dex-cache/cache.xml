@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_2f5dddd82fd114e6c6e4be0a1f2431c668656afe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-0.11.0_af023f404f8c6d8dc852c94e0fefb61b1593962e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_18c53c5d4144152c6235e4316413e46e1937fe82.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_833ffb35449f111f1423405b6bd23bdf0f132517.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_a1bacb536ac2ea304537515aeddd7b6fd1997d1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-0.11.0_c551c43225ef48ddc94471443bf45414bad06df9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_0d1b916401e4ac9bf75731e595301f376c616fe7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/library-2.4.0_6b19f662bbb6d39e6c6499385d147dd2a4ed67af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/Boxlist/react-native-maps/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="40ab8be54d5ddcc1a9343413a9d66bd926a7854e">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/Boxlist-react-native-maps-unspecified_d1059c5f71ee194f0d8d8bce0f248d478d122e0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.0.1_45b79fde09a7074290d26b6b422e98c5ec6791bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_d21fc7a7d5f7d102c2c98f663fa8088985ca0424.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_179e0297fcce209b4ab7b29d0bc7356852bec15c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_96eff3d50b6bbc015a599384f88d08901e23cee2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_f1ecdc3a26c25ebc1bde8f0280fe883b5c531a27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_6682c414197934da07ff1b0313c90d82cc798e45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/Boxlist/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b319ff9834bbeb9be394687614eb86892699ea14">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/Boxlist-react-native-vector-icons-unspecified_9f7991d4f321bda79d84f688903b491395e06bab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_68b2df55d30ebdf77b2f45a1651ebe0de1856963.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.34.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="556b9e3c9e1695ceb107102139dfe6346f4721c5">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_8be8714feb6a12fe33ebee732837f64f94117ff4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_72016083cf92b18feee20d4cb9dbba7854d2f9cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-0.11.0_b6f06aa57701d1b2093955b19a6c0e03a6d1aef9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_7badc7b800b535899a8749d74fabbc57b17cc092.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-9.4.0_65e4f553b510bd37096143f45b6a533f07d8eff1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-0.11.0_26acf01eb79c57baceff73193f552085611b02b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-0.11.0_a07c462605d4a4ec8020b749a3a00f5b8d47ee27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_a31ff8299cb4ee3f81542fff2adfc8a4cb992a55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-0.11.0_f16f53e8da1ca6bafede80a0f8f2bbd73c2dcf71.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_d58e9596783b5405259c81f8b9ef6a3e8bdff4bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.34.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fde7c0ad7606dc25ae2c1fa11b8a48199ea3adc9">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.34.0_ea3996b3229b74abf74da412e278d3eae897a12c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sekhoe01/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3_1770ce839501acfbf0822e869b111fc1898e05ae.jar" />
+    </item>
+
+</items>
