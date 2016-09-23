@@ -4,22 +4,22 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="638276258501"
+    timestamp="569611017840"
     token="6476549256260728400"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="2589" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3601" />
+        duration="0" />
     <task
         name="verifier"
-        duration="765" />
+        duration="0" />
 
     <artifact
         location="/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/outputs/apk/app-debug.apk"
