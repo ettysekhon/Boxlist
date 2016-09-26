@@ -11,6 +11,6 @@ module.exports = {
   // -------------------------------------------------------------------------->
   ADD_PRODUCT: 'ADD_PRODUCT',
   REMOVE_PRODUCT: 'REMOVE_PRODUCT',
-  SELECT_BASKET: 'SELECT_BASKET',
+  SELECT_PRODUCT: 'SELECT_PRODUCT',
   // -------------------------------------------------------------------------->
 };

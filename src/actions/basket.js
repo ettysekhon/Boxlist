@@ -3,7 +3,7 @@ import createAction from './createAction';
 
 const addProduct = createAction(ActionTypes.ADD_PRODUCT);
 const removeProduct = createAction(ActionTypes.REMOVE_PRODUCT);
-const selectProduct = createAction(ActionTypes.SELECT_BASKET);
+const selectProduct = createAction(ActionTypes.SELECT_PRODUCT);
 const emptyBkt = createAction(ActionTypes.EMPTY_BASKET);
 
 export const addToBasket = (product) => {
