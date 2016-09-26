@@ -30,7 +30,7 @@ import {
 
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
-import constants from '../../constants';
+import constants from '../../utils/constants';
 
 /* eslint-disable react/no-multi-comp */
 class BasketView extends Component {

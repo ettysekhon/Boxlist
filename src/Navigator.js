@@ -14,7 +14,7 @@ import CheckoutView from './components/views/CheckoutView';
 import ProductView from './components/views/ProductView';
 import ProductsView from './components/views/ProductsView';
 
-import constants from './constants';
+import constants from './utils/constants';
 
 // TODO: refactor navigator
 const renderRoute = (route, navigator) => {

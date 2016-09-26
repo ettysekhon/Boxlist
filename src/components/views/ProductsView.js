@@ -30,7 +30,7 @@ import loadProducts from '../../actions/products';
 
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
-import constants from '../../constants';
+import constants from '../../utils/constants';
 
 class ProductsView extends Component {
   constructor(props) {

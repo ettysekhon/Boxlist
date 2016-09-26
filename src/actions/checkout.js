@@ -4,7 +4,7 @@ import {
 import ActionTypes from './types.js';
 import createAction from './createAction';
 import API from '../api';
-import constants from '../constants';
+import constants from '../utils/constants';
 
 const placeOrderRequest = createAction(ActionTypes.PLACE_ORDER_REQUEST);
 const placeOrderSuccess = createAction(ActionTypes.PLACE_ORDER_SUCCESS);
