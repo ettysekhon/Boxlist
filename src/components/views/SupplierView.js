@@ -32,7 +32,7 @@ const SupplierView = (props) => {
           size={17.5}
           style={styles.icon}
         />
-        <Text style={styles.leftText}>Home</Text>
+        <Text style={styles.leftText}>Back</Text>
       </View>),
     onPress: () => {
       const { navigator } = props;

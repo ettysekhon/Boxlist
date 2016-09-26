@@ -24,7 +24,7 @@ import ModalSpinner from '../common/ModalSpinner';
 
 // Actions
 import {
-  selectProductForBasket
+  selectProduct
 } from '../../actions/basket';
 import loadProducts from '../../actions/products';
 
@@ -54,7 +54,7 @@ class ProductsView extends Component {
     return (
       <TouchableOpacity
         onPress={() => {
-          this.props.onSelectProductForBasket(rowData);
+          this.props.selectProduct(rowData);
           this.props.navigator.push({
             product: 'product'
           });
@@ -169,13 +169,13 @@ ProductsView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
   loadProducts: PropTypes.func.isRequired,
   navigator: PropTypes.object,
-  onSelectProductForBasket: PropTypes.func,
   /* eslint-enable react/forbid-prop-types */
   products: PropTypes.oneOfType([
     PropTypes.array
   ]),
   productsError: PropTypes.bool,
-  productsLoading: PropTypes.bool
+  productsLoading: PropTypes.bool,
+  selectProduct: PropTypes.func.isRequired
 };
 
 export default connect((state, ownProps) => {
@@ -187,8 +187,8 @@ export default connect((state, ownProps) => {
   };
 }, (dispatch) => {
   return {
-    onSelectProductForBasket: (product) => {
-      dispatch(selectProductForBasket(product));
+    selectProduct: (product) => {
+      dispatch(selectProduct(product));
     },
     loadProducts: () => {
       dispatch(loadProducts());

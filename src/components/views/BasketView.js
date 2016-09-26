@@ -63,7 +63,7 @@ class BasketView extends Component {
           >{rowData.title}</Text>
           <LinkObject
             onPress={() => {
-              this.props.onRemoveFromBasket(rowData);
+              this.props.removeProduct(rowData);
             }}
           >
             <Text
@@ -261,7 +261,7 @@ BasketView.propTypes = {
   basketTotal: PropTypes.string,
   navigator: PropTypes.object.isRequired,
   /* eslint-enable react/forbid-prop-types */
-  onRemoveFromBasket: PropTypes.func.isRequired
+  removeProduct: PropTypes.func.isRequired
 };
 
 export default connect((state, ownProps) => {

@@ -1,36 +1,36 @@
 import ActionTypes from './types.js';
 import createAction from './createAction';
 
-const addProduct = createAction(ActionTypes.ADD_PRODUCT);
-const removeProduct = createAction(ActionTypes.REMOVE_PRODUCT);
-const selectProduct = createAction(ActionTypes.SELECT_PRODUCT);
-const emptyBkt = createAction(ActionTypes.EMPTY_BASKET);
+const addProdct = createAction(ActionTypes.ADD_PRODUCT);
+const removeProdct = createAction(ActionTypes.REMOVE_PRODUCT);
+const selectProdct = createAction(ActionTypes.SELECT_PRODUCT);
+const clearBkt = createAction(ActionTypes.CLEAR_BASKET);
 
-export const addToBasket = (product) => {
+export const addProduct = (product) => {
   return (dispatch) => {
-    dispatch(addProduct({
+    dispatch(addProdct({
       product
     }));
   };
 };
 
-export const emptyBasket = () => {
+export const clearBasket = () => {
   return (dispatch) => {
-    dispatch(emptyBkt());
+    dispatch(clearBkt());
   };
 };
 
-export const removeFromBasket = (product) => {
+export const removeProduct = (product) => {
   return (dispatch) => {
-    dispatch(removeProduct({
+    dispatch(removeProdct({
       product
     }));
   };
 };
 
-export const selectProductForBasket = (product) => {
+export const selectProduct = (product) => {
   return (dispatch) => {
-    dispatch(selectProduct({
+    dispatch(selectProdct({
       product
     }));
   };

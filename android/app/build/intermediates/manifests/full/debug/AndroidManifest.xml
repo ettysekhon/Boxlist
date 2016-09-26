@@ -28,6 +28,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC3Zs4-VvJ2xSBxhlVVCLxRWdIolsZebkc" />
+
         <activity
             android:name="com.boxlist.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

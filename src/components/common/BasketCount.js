@@ -63,6 +63,6 @@ const styles = StyleSheet.create({
 
 export default connect((state) => {
   return {
-    count: state.basket.notificationsBadge
+    count: state.basket.count
   };
 }, null)(BasketCount);

@@ -50,6 +50,7 @@ const getTotal = (basketItems) => {
 };
 
 const emptyBasket = {
+  count: 0,
   selectedProduct: {},
   basketItems: [],
   total: '0.00'
@@ -58,18 +59,20 @@ const emptyBasket = {
 const basket = (state = emptyBasket, action) => {
   let basketItems;
   switch (action.type) {
-  case ActionTypes.EMPTY_BASKET:
+  case ActionTypes.CLEAR_BASKET:
     return objectAssign({}, emptyBasket);
   case ActionTypes.ADD_PRODUCT:
     basketItems = getItems(addProduct(state, action.payload.product));
     return objectAssign({}, state, {
       basketItems,
+      count: state.count + 1,
       total: getTotal(basketItems)
     });
   case ActionTypes.REMOVE_PRODUCT:
     basketItems = getItems(removeProduct(state, action.payload.product));
     return objectAssign({}, state, {
       basketItems,
+      count: state.count - action.payload.product.qty,
       total: getTotal(basketItems)
     });
   case ActionTypes.SELECT_PRODUCT:

@@ -20,7 +20,7 @@ import NavBarContainer from '../common/NavBarContainer';
 
 // Actions
 import {
-  emptyBasket
+  clearBasket
 } from '../../actions/basket';
 
 import fonts from '../../styles/fonts';
@@ -29,7 +29,7 @@ import colors from '../../styles/colors';
 /* eslint-disable react/no-multi-comp */
 class ConfirmationView extends Component {
   componentDidMount() {
-    this.props.emptyBasket();
+    this.props.clearBasket();
   }
   render() {
     const leftItem = {
@@ -178,7 +178,7 @@ ConfirmationView.displayName = 'ConfirmationView';
 
 ConfirmationView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
-  emptyBasket: PropTypes.func,
+  clearBasket: PropTypes.func,
   navigator: PropTypes.object.isRequired,
   /* eslint-enable react/forbid-prop-types */
 };
@@ -189,8 +189,8 @@ export default connect((state, ownProps) => {
   };
 }, (dispatch) => {
   return {
-    emptyBasket: () => {
-      dispatch(emptyBasket());
+    clearBasket: () => {
+      dispatch(clearBasket());
     }
   };
 })(ConfirmationView);
