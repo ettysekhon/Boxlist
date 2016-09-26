@@ -11,14 +11,12 @@ const findProduct = (productId) => {
 
 const addProduct = (state, product) => {
   const match = state.basketItems.find(findProduct(product.id));
-  let ret;
   if (match) {
     match.qty += 1;
-    ret = state.basketItems.filter((p) => {
+    const ret = state.basketItems.filter((p) => {
       return p.id !== match.id;
     });
-    ret = ret.concat([match]);
-    return ret;
+    return ret.concat([match]);
   }
   const prod = objectAssign({}, product, {
     qty: 1

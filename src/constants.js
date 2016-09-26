@@ -1,0 +1,10 @@
+export default {
+  routes: {
+    CONFIRMATION: 'CONFIRMATION',
+    SUPPLIER: 'SUPPLIER',
+    BASKET: 'BASKET',
+    CHECKOUT: 'CHECKOUT',
+    PRODUCT: 'PRODUCT',
+    PRODUCTS: 'PRODUCTS',
+  }
+};

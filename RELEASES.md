@@ -32,12 +32,39 @@
 2. Format prices across screens to 2 d.p (£4.9 to £4.90)
 3. Implement Salman's updated messages
 4. Implement server side monitoring and alerts through Datadog
+5. Conduct load testing of server side using loader.io
 
 ### Version 1.0.6
 1. Update to latest version of React Native (fix issues)
 2. Fix any android issues
-3. Deploy to Android Play store
-4. Submit to App Store/Play store
+  * fix Maps - get google api key and update manifest
+  * custom styling for inputs
+  * launch screen
+  * icons (http://stackoverflow.com/questions/34329715/how-to-make-react-native-app-icon)
+          mipmap-xxhdpi
+            144x144
+          mipmap-xhdpi
+            96x96
+          mipmap-hdpi
+            72x72
+          mipmap-mdpi
+            48x48
+
+3. Refactor application code
+4. Deploy to Android Play store
+  * Generate a signing key
+  * Set up gradle variables
+  * Add signing config to application’s gradle config
+  * Generate the release APK
+  * Install release APK on a device
+5. Submit to App Store/Play store
+  * distribute/test APK
+  * add details for play store
+  * generate assets:
+      - 2 screen shots
+      - 512x512 app icon png
+      - 1024x500 feature image
+      - promo graphic/promo video ?
 
 ### Version 1.0.7
 1. On landscape the status bar is not shown therefore reduce white space on Nav Bar header
@@ -48,6 +75,7 @@
   * zoom into map a little more
   * show label as default.
 6. Implement better keyboard entry on inputs (see how competitors implement keyboard for forms)
+7. Implement responsive font sizes?
 
 ## Future Release Plan:
 ---

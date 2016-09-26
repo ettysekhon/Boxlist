@@ -11,7 +11,8 @@
     "es6": true
   },
   "globals": {
-    "requestAnimationFrame": true
+    "requestAnimationFrame": true,
+    "fetch": true
   },
   "parserOptions": {
     "sourceType": "module",

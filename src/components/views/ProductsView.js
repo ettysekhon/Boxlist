@@ -30,6 +30,7 @@ import loadProducts from '../../actions/products';
 
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
+import constants from '../../constants';
 
 class ProductsView extends Component {
   constructor(props) {
@@ -56,7 +57,7 @@ class ProductsView extends Component {
         onPress={() => {
           this.props.selectProduct(rowData);
           this.props.navigator.push({
-            product: 'product'
+            route: constants.routes.PRODUCT
           });
         }}
         style={styles.row}
@@ -91,7 +92,7 @@ class ProductsView extends Component {
         if (navigator) {
           requestAnimationFrame(() => {
             return navigator.push({
-              basket: 'basket'
+              route: constants.routes.BASKET
             });
           });
         }

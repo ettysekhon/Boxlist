@@ -6,7 +6,7 @@ import objectAssign from 'object-assign';
 const getEndpoint = (path) => {
   const host = 'http://boxlist.kicks-ass.org/api/';
   return `${host}${path}`;
-}
+};
 
 const status = (response) => {
   if (response.status >= 200 && response.status < 300) {

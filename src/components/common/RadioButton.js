@@ -41,7 +41,7 @@ RadioButton.propTypes = {
   title: PropTypes.string,
 };
 
-const SIZE = 24;
+const size = 24;
 
 const styles = StyleSheet.create({
   container: {
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   checkbox: {
-    width: SIZE,
-    height: SIZE,
-    borderRadius: SIZE / 2,
+    width: size,
+    height: size,
+    borderRadius: size / 2,
     marginRight: 10,
   },
   title: {

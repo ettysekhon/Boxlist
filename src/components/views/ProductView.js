@@ -26,6 +26,7 @@ import {
 
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
+import constants from '../../constants';
 
 /* eslint-disable react/no-multi-comp */
 class ProductView extends Component {
@@ -82,7 +83,7 @@ class ProductView extends Component {
         if (navigator) {
           requestAnimationFrame(() => {
             return navigator.push({
-              basket: 'basket'
+              route: constants.routes.BASKET
             });
           });
         }

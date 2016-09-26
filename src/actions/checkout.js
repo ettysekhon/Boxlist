@@ -4,6 +4,7 @@ import {
 import ActionTypes from './types.js';
 import createAction from './createAction';
 import API from '../api';
+import constants from '../constants';
 
 const placeOrderRequest = createAction(ActionTypes.PLACE_ORDER_REQUEST);
 const placeOrderSuccess = createAction(ActionTypes.PLACE_ORDER_SUCCESS);
@@ -18,7 +19,7 @@ const placeOrder = (order, navigator) => {
         confirmation: payload
       }));
       navigator.push({
-        confirmation: 'confirmation'
+        route: constants.routes.CONFIRMATION
       });
     }).catch((err) => {
       Alert.alert(

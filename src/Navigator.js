@@ -14,53 +14,48 @@ import CheckoutView from './components/views/CheckoutView';
 import ProductView from './components/views/ProductView';
 import ProductsView from './components/views/ProductsView';
 
+import constants from './constants';
+
 // TODO: refactor navigator
 const renderRoute = (route, navigator) => {
-  if (route.confirmation) {
+  switch (route.route) {
+  case constants.routes.CONFIRMATION:
     return (
       <ConfirmationView
         navigator={navigator}
       />
     );
-  }
-  if (route.supplier) {
+  case constants.routes.SUPPLIER:
     return (
       <SupplierView
         navigator={navigator}
       />
     );
-  }
-  if (route.basket) {
+  case constants.routes.BASKET:
     return (
       <BasketView
         navigator={navigator}
       />
     );
-  }
-  if (route.checkout) {
+  case constants.routes.CHECKOUT:
     return (
       <CheckoutView
         navigator={navigator}
       />
     );
-  }
-  if (route.product) {
+  case constants.routes.PRODUCT:
     return (
       <ProductView
         navigator={navigator}
       />
     );
-  }
-  if (route.products) {
+  default:
     return (
       <ProductsView
         navigator={navigator}
       />
     );
   }
-  return (<ProductsView
-    navigator={navigator}
-  />);
 };
 
 class BoxListNavigator extends Component {
@@ -68,7 +63,9 @@ class BoxListNavigator extends Component {
     return (
       <Navigator
         configureScene={this.configureScene}
-        initialRoute={{}}
+        initialRoute={{
+          route: 'PRODUCTS'
+        }}
         renderScene={renderRoute}
         style={styles.container}
       />

@@ -14,7 +14,6 @@ import {
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/Ionicons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
-import NavBarContainer from '../common/NavBarContainer';
 
 // Components
 import BLButton from '../common/BLButton';
@@ -22,6 +21,7 @@ import BasketCount from '../common/BasketCount';
 import RadioButton from '../common/RadioButton';
 import LinkObject from '../common/LinkObject';
 import SimpleListView from '../common/SimpleListView';
+import NavBarContainer from '../common/NavBarContainer';
 
 // Actions
 import {
@@ -30,6 +30,7 @@ import {
 
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
+import constants from '../../constants';
 
 /* eslint-disable react/no-multi-comp */
 class BasketView extends Component {
@@ -121,7 +122,6 @@ class BasketView extends Component {
           <BasketCount />
         </View>),
       onPress: () => {
-        console.log('basket button pressed');
       }
     };
     const basketContent = this.props.basketItems.length === 0
@@ -189,7 +189,7 @@ class BasketView extends Component {
                 if (navigator) {
                   requestAnimationFrame(() => {
                     return navigator.push({
-                      supplier: 'supplier'
+                      route: constants.routes.SUPPLIER
                     });
                   });
                 }
@@ -221,7 +221,7 @@ class BasketView extends Component {
           <BLButton
             onPress={() => {
               this.props.navigator.push({
-                checkout: 'checkout'
+                route: constants.routes.CHECKOUT
               });
             }}
             style={{
