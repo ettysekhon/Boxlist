@@ -5,7 +5,6 @@ import React, {
 
 import {
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -18,21 +17,21 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 // Components
-import BLButton from '../common/BLButton';
-import BasketCount from '../common/BasketCount';
-import RadioButton from '../common/RadioButton';
-import LinkObject from '../common/LinkObject';
-import SimpleListView from '../common/SimpleListView';
-import colors from '../../styles/colors';
-import NavBarContainer from '../common/NavBarContainer';
+import BLButton from '../../common/BLButton';
+import BasketCount from '../../common/BasketCount';
+import RadioButton from '../../common/RadioButton';
+import LinkObject from '../../common/LinkObject';
+import SimpleListView from '../../common/SimpleListView';
+import colors from '../../../styles/colors';
+import NavBarContainer from '../../common/NavBarContainer';
 
 // Actions
-import placeOrder from '../../actions/checkout';
+import placeOrder from '../../../actions/checkout';
 import {
   removeProduct
-} from '../../actions/basket';
+} from '../../../actions/basket';
 
-import fonts from '../../styles/fonts';
+import styles from './styles';
 
 /* eslint-disable react/no-multi-comp */
 class CheckoutView extends Component {
@@ -86,7 +85,7 @@ class CheckoutView extends Component {
     /* eslint-disable global-require */
     const image = rowData.images === 'http://www.halladeys.co.uk/photo_uploads/thumbs/nopic.png'
       ? (<Image
-        source={require('../../images/no_image.png')}
+        source={require('../../../images/no_image.png')}
         style={styles.productImage}
       />)
       : (
@@ -430,138 +429,3 @@ export default connect((state, ownProps) => {
 })(CheckoutView);
 
 /* eslint-enable react/no-multi-comp */
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 10,
-  },
-  list: {
-    flex: -1,
-    padding: 10
-  },
-  error: {
-    paddingTop: 15,
-    color: 'red'
-  },
-  totalSection: {
-    padding: 10,
-    flexDirection: 'column',
-    backgroundColor: 'rgb(250,250,250)'
-  },
-  totalRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  totalText: {
-    color: 'rgb(155,155,155)',
-    fontSize: 14
-  },
-  totalValue: {
-    color: 'rgb(0,0,0)',
-    fontSize: 14
-  },
-  totalPrice: {
-    alignSelf: 'flex-end',
-    fontSize: 16
-  },
-  totalIncludingVAT: {
-    paddingTop: 2,
-    fontSize: 9,
-    color: 'rgb(155,155,155)'
-  },
-  deliveryInstructions: {
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-  listHeader: {
-    fontSize: 16
-  },
-  header: {
-    fontSize: 16,
-    marginTop: 5,
-    marginBottom: 10
-  },
-  leftItem: {
-    flexDirection: 'row',
-    alignSelf: 'flex-start',
-    paddingLeft: 15
-  },
-  rightItem: {
-    flexDirection: 'row',
-    alignSelf: 'flex-end',
-    paddingRight: 15
-  },
-  leftText: {
-    fontSize: fonts.size.s,
-    color: colors.primary,
-    marginLeft: 5
-  },
-  emptyBasketText: {
-    marginTop: 10,
-    fontSize: 20,
-    color: '#CCC'
-  },
-  rowContainer: {
-    flex: -1,
-    flexDirection: 'row',
-    borderBottomWidth: 1,
-    paddingVertical: 10,
-    borderColor: 'rgb(223,223,223)'
-  },
-  supplier: {
-    color: 'rgb(204,204,204)',
-    fontSize: 14,
-    paddingTop: 5,
-    paddingLeft: 35
-  },
-  textArea: {
-    height: 66,
-    padding: 10,
-    fontSize: 14,
-    color: 'rgb(155,155,155)',
-    borderWidth: 1,
-    borderColor: 'rgb(204,204,204)',
-    marginBottom: 5
-  },
-  textInput: {
-    height: 44,
-    padding: 10,
-    fontSize: 14,
-    color: 'rgb(155,155,155)',
-    borderWidth: 1,
-    borderColor: 'rgb(204,204,204)',
-    marginBottom: 5
-  },
-  productTitle: {
-    color: 'rgb(74,74,74)'
-  },
-  productPrice: {
-    color: 'rgb(0,0,0)',
-    fontSize: 14
-  },
-  productRemoveLink: {
-    paddingTop: 10,
-    color: 'rgb(155,155,155)',
-    fontSize: 14
-  },
-  productQuantitySection: {
-    marginTop: 10,
-    flexDirection: 'row'
-  },
-  productQuantityLabel: {
-    color: 'rgb(155,155,155)',
-    marginRight: 15
-  },
-  rowMiddleSection: {
-    paddingLeft: 5,
-    flex: 1
-  },
-  productImage: {
-    width: 60,
-    height: 60,
-    backgroundColor: 'transparent',
-    marginRight: 10
-  }
-});
