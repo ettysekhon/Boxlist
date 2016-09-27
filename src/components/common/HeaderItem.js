@@ -17,26 +17,25 @@ class HeaderItem extends Component {
     }
 
     let headerContent = null;
-    const { title, content, onPress } = item;
 
-    if (title) {
+    if (item.title) {
       headerContent = (
         <Text
           style={styles.text}
         >
-        {
-          title
-        }
+          {
+            item.title
+          }
         </Text>);
-    } else if (content) {
-      headerContent = (content);
+    } else if (item.content) {
+      headerContent = (item.content);
     }
 
     return (
       <TouchableOpacity
-        accessibilityLabel={title}
+        accessibilityLabel={item.title}
         accessibilityTraits={'button'}
-        onPress={onPress}
+        onPress={item.onPress}
         style={styles.itemWrapper}
       >
         {headerContent}

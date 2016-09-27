@@ -41,15 +41,15 @@
   * custom styling for inputs
   * launch screen
   * icons (http://stackoverflow.com/questions/34329715/how-to-make-react-native-app-icon)
-          mipmap-xxhdpi
-            144x144
-          mipmap-xhdpi
-            96x96
-          mipmap-hdpi
-            72x72
-          mipmap-mdpi
-            48x48
-
+      mipmap-xxhdpi
+        144x144
+      mipmap-xhdpi
+        96x96
+      mipmap-hdpi
+        72x72
+      mipmap-mdpi
+        48x48
+  * handle android back button (remove nav bar back button)
 3. Refactor application code
 4. Deploy to Android Play store
   * Generate a signing key
@@ -76,6 +76,8 @@
   * show label as default.
 6. Implement better keyboard entry on inputs (see how competitors implement keyboard for forms)
 7. Implement responsive font sizes?
+8. Basket Counter - red circle doesn't for large numbers
+9. Multiples of - ability to add multiple of an item to basket
 
 ## Future Release Plan:
 ---
@@ -86,10 +88,13 @@
 ### Version 1.0.9 (Increment 2 (Oct 15):
 
 #### App:
-  1. Implement better grid view test on all device dimensions
-  2. Add categories
-  3. Basic search - filtering
-  4. Mobile analytics
+1. Implement better grid view test on all device dimensions
+2. Add categories
+3. Basic search - filtering
+4. Mobile analytics
+  https://www.google.co.uk/analytics/mobile/
+  https://analytics.facebook.com/features/
+  https://github.com/idehub/react-native-google-analytics-bridge
 
 #### Web Dashboard:
   1. Supplier order view
