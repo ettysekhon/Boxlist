@@ -3,16 +3,18 @@ import React, {
 } from 'react';
 
 import {
+  BackAndroid,
+  Platform,
   StyleSheet,
   Navigator
 } from 'react-native';
 
-import BasketView from './components/views/BasketView';
-import ConfirmationView from './components/views/ConfirmationView';
-import SupplierView from './components/views/SupplierView';
-import CheckoutView from './components/views/CheckoutView';
-import ProductView from './components/views/ProductView';
-import ProductsView from './components/views/ProductsView';
+import BasketView from './views/BasketView';
+import ConfirmationView from './views/ConfirmationView';
+import SupplierView from './views/SupplierView';
+import CheckoutView from './views/CheckoutView';
+import ProductView from './views/ProductView';
+import ProductsView from './views/ProductsView';
 
 import constants from './utils/constants';
 
@@ -58,20 +60,64 @@ const renderRoute = (route, navigator) => {
   }
 };
 
+const handlers = [];
+
 class BoxListNavigator extends Component {
+  constructor() {
+    super();
+    this.handleBackButton = this.handleBackButton.bind(this);
+  }
+  getChildContext() {
+    return {
+      addBackButtonListener: this.addBackButtonListener,
+      removeBackButtonListener: this.removeBackButtonListener,
+    };
+  }
+  componentDidMount() {
+    BackAndroid.addEventListener('hardwareBackPress', this.handleBackButton);
+  }
+  componentWillUnmount() {
+    BackAndroid.removeEventListener('hardwareBackPress', this.handleBackButton);
+  }
+  handleBackButton() {
+    for (let i = handlers.length - 1; i >= 0; i -= 1) {
+      if (handlers[i]()) {
+        return true;
+      }
+    }
+
+    const { navigator } = this;
+    if (navigator && navigator.getCurrentRoutes().length > 1) {
+      navigator.pop();
+      return true;
+    }
+
+    return false;
+  }
   render() {
     return (
       <Navigator
-        configureScene={this.configureScene}
+        configureScene={(route) => {
+          if (Platform.OS === 'android') {
+            return Navigator.SceneConfigs.FloatFromBottomAndroid;
+          }
+          return Navigator.SceneConfigs.PushFromRight;
+        }}
         initialRoute={{
           route: 'PRODUCTS'
         }}
+        ref={(c) => { this.navigator = c; }}
         renderScene={renderRoute}
         style={styles.container}
       />
     );
   }
 }
+
+BoxListNavigator.childContextTypes = {
+  addBackButtonListener: React.PropTypes.func,
+  removeBackButtonListener: React.PropTypes.func,
+};
 
 const styles = StyleSheet.create({
   container: {
