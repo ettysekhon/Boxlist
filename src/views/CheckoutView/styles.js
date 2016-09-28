@@ -1,8 +1,8 @@
 import {
-  StyleSheet,
-} from 'react-native';
+  create
+} from '../../common/BLStyleSheet';
 
-export default StyleSheet.create({
+export default create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -78,18 +78,22 @@ export default StyleSheet.create({
     padding: 10,
     fontSize: 14,
     color: 'rgb(155,155,155)',
-    borderWidth: 1,
-    borderColor: 'rgb(204,204,204)',
-    marginBottom: 5
+    marginBottom: 5,
+    ios: {
+      borderWidth: 1,
+      borderColor: 'rgb(204,204,204)'
+    }
   },
   textInput: {
     height: 44,
     padding: 10,
     fontSize: 14,
     color: 'rgb(155,155,155)',
-    borderWidth: 1,
-    borderColor: 'rgb(204,204,204)',
-    marginBottom: 5
+    marginBottom: 5,
+    ios: {
+      borderWidth: 1,
+      borderColor: 'rgb(204,204,204)'
+    }
   },
   productTitle: {
     color: 'rgb(74,74,74)'

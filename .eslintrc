@@ -22,7 +22,8 @@
       "modules": true,
       "blockBindings": true,
       "destructuring": true,
-      "arrowFunctions": true
+      "arrowFunctions": true,
+      "experimentalObjectRestSpread": true
     }
   },
   "rules": {
