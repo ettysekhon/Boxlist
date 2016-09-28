@@ -50,13 +50,13 @@
       mipmap-mdpi
         48x48
   * handle android back button (remove nav bar back button)
-3. Refactor application code
+3. Refactor application code (number of improvements)
 4. Deploy to Android Play store
-  * Generate a signing key
+  * Generate signing key
   * Set up gradle variables
-  * Add signing config to application’s gradle config
-  * Generate the release APK
-  * Install release APK on a device
+  * Add signing config to apps gradle config
+  * Generate release APK
+  * Install release APK on device - maybe
 5. Submit to App Store/Play store
   * distribute/test APK
   * add details for play store
@@ -88,7 +88,7 @@
 ### Version 1.0.9 (Increment 2 (Oct 15):
 
 #### App:
-1. Implement better grid view test on all device dimensions
+1. Implement better grid view test on all device dimensions - check limitations
 2. Add categories
 3. Basic search - filtering
 4. Mobile analytics

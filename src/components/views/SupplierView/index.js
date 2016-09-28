@@ -10,29 +10,17 @@ import {
 
 import { connect } from 'react-redux';
 import MapView from 'react-native-maps';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 // Components
 import NavBarContainer from '../../common/NavBarContainer';
+import NavBarBackButton from '../../common/NavBarBackButton';
 
-import colors from '../../../styles/colors';
 import styles from './styles';
 
 /* eslint-disable react/no-multi-comp */
 const SupplierView = (props) => {
   const leftItem = {
-    content: (
-      <View
-        style={styles.leftItem}
-      >
-        <Icon
-          color={colors.primary}
-          name={'ios-arrow-back'}
-          size={17.5}
-          style={styles.icon}
-        />
-        <Text style={styles.leftText}>Back</Text>
-      </View>),
+    content: (<NavBarBackButton />),
     onPress: () => {
       const { navigator } = props;
       if (navigator) {

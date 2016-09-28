@@ -13,7 +13,6 @@ import {
 
 import { connect } from 'react-redux';
 import objectAssign from 'object-assign';
-import Icon from 'react-native-vector-icons/Ionicons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 // Components
@@ -24,6 +23,7 @@ import LinkObject from '../../common/LinkObject';
 import SimpleListView from '../../common/SimpleListView';
 import colors from '../../../styles/colors';
 import NavBarContainer from '../../common/NavBarContainer';
+import NavBarBackButton from '../../common/NavBarBackButton';
 
 // Actions
 import placeOrder from '../../../actions/checkout';
@@ -184,18 +184,7 @@ class CheckoutView extends Component {
     }
 
     const leftItem = {
-      content: (
-        <View
-          style={styles.leftItem}
-        >
-          <Icon
-            color={colors.primary}
-            name={'ios-arrow-back'}
-            size={17.5}
-            style={styles.icon}
-          />
-          <Text style={styles.leftText}>Back</Text>
-        </View>),
+      content: (<NavBarBackButton />),
       onPress: () => {
         const { navigator } = this.props;
         if (navigator) {

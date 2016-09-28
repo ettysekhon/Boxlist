@@ -41,14 +41,8 @@ const Header = ({ leftItem, title, rightItem }) => {
 Header.displayName = 'Header';
 
 Header.propTypes = {
-  leftItem: PropTypes.shape({
-    title: PropTypes.string,
-    onPress: PropTypes.func,
-  }),
-  rightItem: PropTypes.shape({
-    title: PropTypes.string,
-    onPress: PropTypes.func,
-  }),
+  leftItem: PropTypes.object,
+  rightItem: PropTypes.object,
   title: PropTypes.string
 };
 

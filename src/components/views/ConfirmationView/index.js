@@ -10,19 +10,18 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import Icon from 'react-native-vector-icons/Ionicons';
 import MapView from 'react-native-maps';
 
 // Components
 import BLButton from '../../common/BLButton';
 import NavBarContainer from '../../common/NavBarContainer';
+import NavBarBackButton from '../../common/NavBarBackButton';
 
 // Actions
 import {
   clearBasket
 } from '../../../actions/basket';
 
-import colors from '../../../styles/colors';
 import styles from './styles';
 
 /* eslint-disable react/no-multi-comp */
@@ -32,18 +31,7 @@ class ConfirmationView extends Component {
   }
   render() {
     const leftItem = {
-      content: (
-        <View
-          style={styles.leftItem}
-        >
-          <Icon
-            color={colors.primary}
-            name={'ios-arrow-back'}
-            size={17.5}
-            style={styles.icon}
-          />
-          <Text style={styles.leftText}>Home</Text>
-        </View>),
+      content: (<NavBarBackButton />),
       onPress: () => {
         const { navigator } = this.props;
         if (navigator) {

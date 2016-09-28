@@ -2,9 +2,6 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import fonts from '../../../styles/fonts';
-import colors from '../../../styles/colors';
-
 export default StyleSheet.create({
   container: {
     paddingTop: 30,
@@ -14,20 +11,10 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
   },
-  leftItem: {
-    flexDirection: 'row',
-    alignSelf: 'flex-start',
-    paddingLeft: 15
-  },
   rightItem: {
     flexDirection: 'row',
     alignSelf: 'flex-end',
     paddingRight: 15
-  },
-  leftText: {
-    fontSize: fonts.size.s,
-    color: colors.primary,
-    marginLeft: 5
   },
   productImage: {
     alignSelf: 'center',

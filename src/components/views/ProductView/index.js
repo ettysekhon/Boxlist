@@ -10,13 +10,13 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import Icon from 'react-native-vector-icons/Ionicons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 // Components
 import BLButton from '../../common/BLButton';
 import BasketCount from '../../common/BasketCount';
 import NavBarContainer from '../../common/NavBarContainer';
+import NavBarBackButton from '../../common/NavBarBackButton';
 
 // Actions
 import {
@@ -44,18 +44,7 @@ class ProductView extends Component {
   }
   render() {
     const leftItem = {
-      content: (
-        <View
-          style={styles.leftItem}
-        >
-          <Icon
-            color={colors.primary}
-            name={'ios-arrow-back'}
-            size={17.5}
-            style={styles.icon}
-          />
-          <Text style={styles.leftText}>Back</Text>
-        </View>),
+      content: (<NavBarBackButton />),
       onPress: () => {
         const { navigator } = this.props;
         if (navigator) {

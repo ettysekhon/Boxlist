@@ -47,11 +47,7 @@ class HeaderItem extends Component {
 HeaderItem.displayName = 'HeaderItem';
 
 HeaderItem.propTypes = {
-  item: PropTypes.shape({
-    title: PropTypes.string,
-    content: PropTypes.node,
-    onPress: PropTypes.func,
-  }),
+  item: PropTypes.object,
 };
 
 export default HeaderItem;

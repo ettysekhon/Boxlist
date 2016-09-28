@@ -28,16 +28,8 @@ NavBarContainer.displayName = 'NavBarContainer';
 
 NavBarContainer.propTypes = {
   children: PropTypes.node.isRequired,
-  leftItem: PropTypes.shape({
-    content: PropTypes.node,
-    onPress: PropTypes.func,
-    title: PropTypes.string
-  }),
-  rightItem: PropTypes.shape({
-    content: PropTypes.node,
-    onPress: PropTypes.func,
-    title: PropTypes.string
-  }),
+  leftItem: PropTypes.object,
+  rightItem: PropTypes.object,
   title: PropTypes.string
 };
 
