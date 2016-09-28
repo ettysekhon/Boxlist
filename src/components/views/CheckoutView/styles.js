@@ -55,11 +55,6 @@ export default StyleSheet.create({
     marginTop: 5,
     marginBottom: 10
   },
-  rightItem: {
-    flexDirection: 'row',
-    alignSelf: 'flex-end',
-    paddingRight: 15
-  },
   emptyBasketText: {
     marginTop: 10,
     fontSize: 20,

@@ -10,9 +10,12 @@ import {
 
 import { connect } from 'react-redux';
 
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import colors from '../../styles/colors';
+
 const BasketCount = (props) => {
   const { count } = props;
-  return count === 0
+  const basketCount = count === 0
     ? null
     : (
     <View
@@ -23,6 +26,21 @@ const BasketCount = (props) => {
           {count}
         </Text>
       </View>
+    </View>
+  );
+
+  return (
+    <View
+      style={styles.rightItem}
+    >
+      <EvilIcons
+        color={colors.dark.color}
+        name={'cart'}
+        size={30}
+      />
+      {
+        basketCount
+      }
     </View>
   );
 };
@@ -38,16 +56,16 @@ BasketCount.defaultProps = {
   count: 0
 };
 
-const SIZE = 15;
+const size = 15;
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
   },
   countContainer: {
-    width: SIZE,
-    height: SIZE,
-    borderRadius: SIZE / 2,
+    width: size,
+    height: size,
+    borderRadius: size / 2,
     marginTop: -5,
     backgroundColor: 'red',
     alignItems: 'center',
@@ -58,6 +76,11 @@ const styles = StyleSheet.create({
     color: 'white',
     flex: 1,
     alignItems: 'center',
+  },
+  rightItem: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    paddingRight: 15
   },
 });
 

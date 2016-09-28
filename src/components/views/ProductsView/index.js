@@ -27,7 +27,6 @@ import {
 } from '../../../actions/basket';
 import loadProducts from '../../../actions/products';
 
-import colors from '../../../styles/colors';
 import constants from '../../../utils/constants';
 import styles from './styles';
 
@@ -75,17 +74,7 @@ class ProductsView extends Component {
   }
   render() {
     const rightItem = {
-      content: (
-        <View
-          style={styles.rightItem}
-        >
-          <EvilIcons
-            color={colors.dark.color}
-            name={'cart'}
-            size={30}
-          />
-          <BasketCount />
-        </View>),
+      content: (<BasketCount />),
       onPress: () => {
         const { navigator } = this.props;
         if (navigator) {

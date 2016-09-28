@@ -21,7 +21,6 @@ import BasketCount from '../../common/BasketCount';
 import RadioButton from '../../common/RadioButton';
 import LinkObject from '../../common/LinkObject';
 import SimpleListView from '../../common/SimpleListView';
-import colors from '../../../styles/colors';
 import NavBarContainer from '../../common/NavBarContainer';
 import NavBarBackButton from '../../common/NavBarBackButton';
 
@@ -195,17 +194,7 @@ class CheckoutView extends Component {
       }
     };
     const rightItem = {
-      content: (
-        <View
-          style={styles.rightItem}
-        >
-          <EvilIcons
-            color={colors.dark.color}
-            name={'cart'}
-            size={30}
-          />
-          <BasketCount />
-        </View>),
+      content: (<BasketCount />),
       onPress: () => {
         // we pop here as we assume only way to
         // checkout is via basket page

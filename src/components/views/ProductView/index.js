@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 // Components
 import BLButton from '../../common/BLButton';
@@ -23,7 +22,6 @@ import {
   addProduct
 } from '../../../actions/basket';
 
-import colors from '../../../styles/colors';
 import constants from '../../../utils/constants';
 import styles from './styles';
 
@@ -55,17 +53,7 @@ class ProductView extends Component {
       }
     };
     const rightItem = {
-      content: (
-        <View
-          style={styles.rightItem}
-        >
-          <EvilIcons
-            color={colors.dark.color}
-            name={'cart'}
-            size={30}
-          />
-          <BasketCount />
-        </View>),
+      content: (<BasketCount />),
       onPress: () => {
         const { navigator } = this.props;
         if (navigator) {

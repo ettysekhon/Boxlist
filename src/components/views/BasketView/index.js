@@ -27,7 +27,6 @@ import {
   removeProduct
 } from '../../../actions/basket';
 
-import colors from '../../../styles/colors';
 import constants from '../../../utils/constants';
 import styles from './styles';
 
@@ -98,17 +97,7 @@ class BasketView extends Component {
       }
     };
     const rightItem = {
-      content: (
-        <View
-          style={styles.rightItem}
-        >
-          <EvilIcons
-            color={colors.dark.color}
-            name={'cart'}
-            size={30}
-          />
-          <BasketCount />
-        </View>),
+      content: (<BasketCount />),
       onPress: () => {
       }
     };
