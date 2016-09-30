@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import MapView from 'react-native-maps';
+import Map from '../../common/Map';
 
 // Components
 import BLButton from '../../common/BLButton';
@@ -60,33 +60,7 @@ class ConfirmationView extends Component {
             <Text
               style={styles.description}
             >{description}</Text>
-            <MapView
-              annotations={[{
-                latitude: 51.5639151,
-                longitude: -0.024304,
-                title: 'FG Halladeys & Sons',
-                subtitle: 'supplier'
-              }]}
-              region={{
-                latitude: 51.56391,
-                longitude: -0.02430,
-                latitudeDelta: 0.0692,
-                longitudeDelta: 0.0316
-              }}
-              style={{
-                height: 200,
-                marginVertical: 10
-              }}
-            >
-              <MapView.Marker
-                coordinate={{
-                  latitude: 51.5639151,
-                  longitude: -0.024304,
-                }}
-                description={'supplier'}
-                title={'FG Halladeys & Sons'}
-              />
-            </MapView>
+            <Map />
             <BLButton
               onPress={() => {
                 const { navigator } = this.props;

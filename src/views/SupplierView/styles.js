@@ -7,10 +7,6 @@ export default StyleSheet.create({
     flex: -1,
     padding: 10
   },
-  map: {
-    height: 200,
-    marginVertical: 10
-  },
   header: {
     fontSize: 18,
     paddingTop: 5

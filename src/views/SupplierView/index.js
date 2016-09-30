@@ -3,44 +3,19 @@ import React, {
 } from 'react';
 
 import {
-  Dimensions,
   ScrollView,
   Text,
   View
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import MapView from 'react-native-maps';
 
 // Components
 import NavBarContainer from '../../common/NavBarContainer';
 import NavBarBackButton from '../../common/NavBarBackButton';
+import Map from '../../common/Map';
 
 import styles from './styles';
-
-const { width, height } = Dimensions.get('window');
-
-const ASPECT_RATIO = width / height;
-const LATITUDE = 51.5639151;
-const LONGITUDE = -0.024304;
-const LATITUDE_DELTA = 0.0692;
-const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-const TITLE = 'FG Halladeys & Sons';
-const SUBTITLE = 'supplier';
-
-const region = {
-  latitude: LATITUDE,
-  longitude: LONGITUDE,
-  latitudeDelta: LATITUDE_DELTA,
-  longitudeDelta: LONGITUDE_DELTA,
-};
-
-const annotations = {
-  latitude: LATITUDE,
-  longitude: LONGITUDE,
-  title: TITLE,
-  subtitle: SUBTITLE
-};
 
 /* eslint-disable react/no-multi-comp */
 const SupplierView = (props) => {
@@ -68,20 +43,7 @@ const SupplierView = (props) => {
           <Text
             style={styles.header}
           >FG Halladeys & Sons</Text>
-          <MapView
-            annotations={[annotations]}
-            initialRegion={region}
-            style={styles.map}
-          >
-            <MapView.Marker
-              coordinate={{
-                latitude: LATITUDE,
-                longitude: LONGITUDE,
-              }}
-              description={SUBTITLE}
-              title={TITLE}
-            />
-          </MapView>
+          <Map />
           <Text
             style={styles.subHeading}
           >Address</Text>
