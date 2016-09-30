@@ -97,4 +97,8 @@ set up Beta Testing.
 your APK, select the Beta Testing tab to start adding beta testers
 * Do open or closed beta testing
 
-## Play Store Listing
+## Play Store Listing SHA1
+DEBUG:
+4C:F6:8D:80:9C:AC:E1:AF:48:7A:1D:19:49:BB:60:12:70:C9:68:C8
+RELEASE:
+AE:8D:B4:AE:B2:34:4A:9A:0C:9A:E7:E4:91:23:69:66:F7:B3:44:96
