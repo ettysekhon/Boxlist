@@ -2393,6 +2393,7 @@ containing a value of this type.
         public static final int common_open_on_phone=0x7f070022;
         public static final int common_signin_button_text=0x7f070023;
         public static final int common_signin_button_text_long=0x7f070024;
+        public static final int google_maps_api_key=0x7f07003e;
         public static final int status_bar_notification_info_overflow=0x7f070025;
     }
     public static final class style {
@@ -2401,8 +2402,6 @@ containing a value of this type.
         public static final int Animation_AppCompat_Dialog=0x7f09007c;
         public static final int Animation_AppCompat_DropDownUp=0x7f09007d;
         public static final int Animation_Catalyst_RedBox=0x7f09007e;
-        /**  Customize your theme here. 
-         */
         public static final int AppTheme=0x7f09007f;
         public static final int Base_AlertDialog_AppCompat=0x7f090080;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f090081;

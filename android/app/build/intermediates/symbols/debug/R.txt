@@ -782,6 +782,7 @@ int string common_google_play_services_wear_update_text 0x7f070021
 int string common_open_on_phone 0x7f070022
 int string common_signin_button_text 0x7f070023
 int string common_signin_button_text_long 0x7f070024
+int string google_maps_api_key 0x7f07003e
 int string status_bar_notification_info_overflow 0x7f070025
 int style AlertDialog_AppCompat 0x7f09007a
 int style AlertDialog_AppCompat_Light 0x7f09007b
