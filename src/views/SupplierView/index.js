@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 
 import {
+  Dimensions,
   ScrollView,
   Text,
   View
@@ -16,6 +17,30 @@ import NavBarContainer from '../../common/NavBarContainer';
 import NavBarBackButton from '../../common/NavBarBackButton';
 
 import styles from './styles';
+
+const { width, height } = Dimensions.get('window');
+
+const ASPECT_RATIO = width / height;
+const LATITUDE = 51.5639151;
+const LONGITUDE = -0.024304;
+const LATITUDE_DELTA = 0.0692;
+const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+const TITLE = 'FG Halladeys & Sons';
+const SUBTITLE = 'supplier';
+
+const region = {
+  latitude: LATITUDE,
+  longitude: LONGITUDE,
+  latitudeDelta: LATITUDE_DELTA,
+  longitudeDelta: LONGITUDE_DELTA,
+};
+
+const annotations = {
+  latitude: LATITUDE,
+  longitude: LONGITUDE,
+  title: TITLE,
+  subtitle: SUBTITLE
+};
 
 /* eslint-disable react/no-multi-comp */
 const SupplierView = (props) => {
@@ -44,30 +69,17 @@ const SupplierView = (props) => {
             style={styles.header}
           >FG Halladeys & Sons</Text>
           <MapView
-            annotations={[{
-              latitude: 51.5639151,
-              longitude: -0.024304,
-              title: 'FG Halladeys & Sons',
-              subtitle: 'supplier'
-            }]}
-            region={{
-              latitude: 51.56391,
-              longitude: -0.02430,
-              latitudeDelta: 0.0692,
-              longitudeDelta: 0.0316
-            }}
-            style={{
-              height: 200,
-              marginVertical: 10
-            }}
+            annotations={[annotations]}
+            initialRegion={region}
+            style={styles.map}
           >
             <MapView.Marker
               coordinate={{
-                latitude: 51.5639151,
-                longitude: -0.024304,
+                latitude: LATITUDE,
+                longitude: LONGITUDE,
               }}
-              description={'supplier'}
-              title={'FG Halladeys & Sons'}
+              description={SUBTITLE}
+              title={TITLE}
             />
           </MapView>
           <Text

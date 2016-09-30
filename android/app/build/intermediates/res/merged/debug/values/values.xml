@@ -270,7 +270,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="google_maps_api_key">AIzaSyBjJoyp2HaMPlS2M6zNnCzg8SmR2FgdgVg</string>
+    <string name="google_maps_api_key">AIzaSyACfwh0wiK94rK8Zsw457Pmrxpy7m4xI6w</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
