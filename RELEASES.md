@@ -66,7 +66,7 @@
       - 1024x500 feature image
       - promo graphic/promo video ?
 
-### Version 1.0.7
+### Version 1.0.7 [not implemented]
 1. On landscape the status bar is not shown therefore reduce white space on Nav Bar header
 2. Cache products so that they are available when there is no connection rather than display no products
 3. handle connection change status - show brief animated message
@@ -88,21 +88,22 @@
 ### Version 1.0.9 (Increment 2 (Oct 15):
 
 #### App:
-1. Implement better grid view test on all device dimensions - check limitations
-2. Add categories
-3. Basic search - filtering
-4. Mobile analytics
+1. Implement better grid view test on all device dimensions - check limitations [looks ok, test further?]
+1. Add categories
+2. Basic search - filtering
+3. Mobile analytics
   https://www.google.co.uk/analytics/mobile/
   https://analytics.facebook.com/features/
   https://github.com/idehub/react-native-google-analytics-bridge
 
-#### Web Dashboard:
-  1. Supplier order view
-    * print order
-    * update order status
-    * partial order or cancel order? -> update db
-  2. SMS notification - order notification / notification to customer?
-  3. BONUS - app notifications
+#### Web Dashboard (simple as possible):
+1. Supplier order view
+  * print order
+  * update order status
+  * partial order or cancel order? -> update db
+2. SMS notification - order notification / notification to customer?
+3. BONUS - app notifications
+4. Email confirmations?
 
 #### Scraper:
   1. Investigate why this does not work in container (Nightmare issue) or create script to ensure it runs on host and updates RethinkDB container.
@@ -117,3 +118,33 @@
     * pre-populate input fields (local storage)
   3) User accounts
   4) Extra features ???
+
+
+  1. Categories (filtering)
+  2. Search
+  4. Analytics (page view, app open) -> GA (5 days)
+  6. Notifications ("Order has been accepted")
+  7. Improved scrapper
+  8. Payments
+  9. Accounts (7 days)
+  10. Dashboard ()
+  
+1. Filtering, Categories = 4 + 7
+2. Search = 7 
+3. Analytics = 5
+4. Dashboard = 
+5. Notifications = 3
+6. Improved scrapper = 5
+7. Accounts = 7
+8. Payments = 21 
+9. Unknown = 7
+
+1. Categories
+2. Search
+3. Filtering
+4. Analytics
+5. Dashboard
+6. Notifications
+7. Improved scrapper
+8. Payments
+9. Accounts
