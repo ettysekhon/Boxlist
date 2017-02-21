@@ -1,5 +1,5 @@
 import objectAssign from 'object-assign';
-import ActionTypes from '../actions/types.js';
+import ActionTypes from '../actions/types';
 
 const products = (state = {
   error: false,

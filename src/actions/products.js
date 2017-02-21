@@ -1,4 +1,4 @@
-import ActionTypes from './types.js';
+import ActionTypes from './types';
 import createAction from './createAction';
 import API from '../api';
 

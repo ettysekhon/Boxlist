@@ -74,11 +74,11 @@ class ProductView extends Component {
         style={styles.productImage}
       />)
       : (
-      <Image
-        resizeMode={'contain'}
-        source={{ uri: product.images }}
-        style={styles.productImage}
-      />
+        <Image
+          resizeMode={'contain'}
+          source={{ uri: product.images }}
+          style={styles.productImage}
+        />
     );
     /* eslint-enable global-require */
 

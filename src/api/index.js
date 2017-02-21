@@ -1,5 +1,5 @@
 import objectAssign from 'object-assign';
-
+import algolia from './algolia';
 // TODO: remove this hack when fixed in later version of react-native
 // http://stackoverflow.com/questions/38077273/react-native-fect-network-request-failed-not-using-localhost
 
@@ -32,6 +32,7 @@ const getPayload = (json) => {
     : json.payload;
 };
 
+/* eslint-disable no-unused-vars */
 const get = (url) => {
   return new Promise((resolve, reject) => {
     fetch(url, {
@@ -54,6 +55,7 @@ const get = (url) => {
     });
   });
 };
+/* eslint-enable no-unused-vars */
 
 const post = (url, body) => {
   // const { auth } = store.getState();
@@ -82,30 +84,29 @@ const post = (url, body) => {
   });
 };
 
-const loadProducts = () => {
-  return new Promise((resolve, reject) => {
-    get(getEndpoint('product'))
-      .then((response) => {
-        const products = response.products;
-        const prods = products.map((product, index) => {
-          return objectAssign({}, product, {
-            id: index + 1,
-            supplier: 'halladeys',
-            price: Number(product.price).toFixed(2),
-            costPrice: Number(product.costPrice).toFixed(2)
-          });
-        });
-        resolve(prods);
-      })
-      .catch((err) => {
-        console.log('error getting products', err);
-        reject(err);
-      });
-  });
-};
-
 const placeOrder = (order) => {
   return post(getEndpoint('order'), order);
+};
+
+const loadProducts = () => {
+  return new Promise((resolve, reject) => {
+    algolia.search(0, '', '')
+    .then((content) => {
+      const products = content.hits;
+      const prods = products.map((product, index) => {
+        return objectAssign({}, product, {
+          id: index + 1,
+          supplier: 'halladeys',
+          price: Number(product.price).toFixed(2),
+          costPrice: Number(product.costPrice).toFixed(2)
+        });
+      });
+      resolve(prods);
+    })
+    .catch((err) => {
+      reject(err);
+    });
+  });
 };
 
 export default {
