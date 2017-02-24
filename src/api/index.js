@@ -88,12 +88,13 @@ const placeOrder = (order) => {
   return post(getEndpoint('order'), order);
 };
 
-const loadProducts = () => {
+const loadProducts = (page, category, query) => {
   return new Promise((resolve, reject) => {
-    algolia.search(0, '', '')
+    algolia.search(page, category, query)
     .then((content) => {
-      const products = content.hits;
-      const prods = products.map((product, index) => {
+      const prods = content.hits;
+      const categories = Object.keys(content.facets.parentCategory);
+      const products = prods.map((product, index) => {
         return objectAssign({}, product, {
           id: index + 1,
           supplier: 'halladeys',
@@ -101,7 +102,10 @@ const loadProducts = () => {
           costPrice: Number(product.costPrice).toFixed(2)
         });
       });
-      resolve(prods);
+      resolve({
+        products,
+        categories
+      });
     })
     .catch((err) => {
       reject(err);

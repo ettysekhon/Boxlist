@@ -6,14 +6,19 @@ const productsRequest = createAction(ActionTypes.PRODUCTS_REQUEST);
 const productsSuccess = createAction(ActionTypes.PRODUCTS_SUCCESS);
 const productsFailure = createAction(ActionTypes.PRODUCTS_FAILURE);
 
-const loadProducts = () => {
+const loadProducts = (page, category, query) => {
   return (dispatch) => {
     dispatch(productsRequest());
-    API.loadProducts()
+    API.loadProducts(page, category, query)
     .then((payload) => {
       dispatch(productsSuccess({
-        products: payload
+        products: payload.products || []
       }));
+      dispatch({
+        type: ActionTypes.SET_CATEGORIES,
+        payload: payload.categories,
+        error: null
+      });
     }).catch((err) => {
       dispatch(productsFailure(null, err));
     });

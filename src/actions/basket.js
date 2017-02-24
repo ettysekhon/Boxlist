@@ -1,4 +1,4 @@
-import ActionTypes from './types.js';
+import ActionTypes from './types';
 import createAction from './createAction';
 
 const addProdct = createAction(ActionTypes.ADD_PRODUCT);

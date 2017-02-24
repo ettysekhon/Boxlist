@@ -8,15 +8,31 @@ import {
 } from 'react-native';
 
 import Header from './Header';
+import HomePageHeader from './HomePageHeader';
 
 const NavBarContainer = (props) => {
-  return (
-    <View style={styles.container}>
+  const header = props.simple
+    ? (
       <Header
         leftItem={props.leftItem}
         rightItem={props.rightItem}
         title={props.title}
       />
+    )
+    : (
+      <HomePageHeader
+        leftItem={props.leftItem}
+        onTabClick={props.onTabClick}
+        rightItem={props.rightItem}
+        tabs={props.tabs}
+        title={props.title}
+      />
+  );
+  return (
+    <View style={styles.container}>
+      {
+        header
+      }
       {
         props.children
       }
@@ -26,10 +42,19 @@ const NavBarContainer = (props) => {
 
 NavBarContainer.displayName = 'NavBarContainer';
 
+NavBarContainer.defaultProps = {
+  simple: true
+};
+
 NavBarContainer.propTypes = {
+  simple: PropTypes.bool,
   children: PropTypes.node.isRequired,
+  /* eslint-disable react/forbid-prop-types */
   leftItem: PropTypes.object,
   rightItem: PropTypes.object,
+  /* eslint-enable react/forbid-prop-types */
+  tabs: PropTypes.arrayOf(PropTypes.string),
+  onTabClick: PropTypes.func,
   title: PropTypes.string
 };
 

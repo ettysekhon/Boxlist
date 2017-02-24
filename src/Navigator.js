@@ -15,6 +15,7 @@ import SupplierView from './views/SupplierView';
 import CheckoutView from './views/CheckoutView';
 import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
+import CategoryView from './views/CategoryView';
 
 import constants from './utils/constants';
 
@@ -48,6 +49,13 @@ const renderRoute = (route, navigator) => {
   case constants.routes.PRODUCT:
     return (
       <ProductView
+        navigator={navigator}
+      />
+    );
+  case constants.routes.CATEGORY:
+    return (
+      <CategoryView
+        category={route.category}
         navigator={navigator}
       />
     );

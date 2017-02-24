@@ -1,5 +1,7 @@
 export default {
   routes: {
+    FILTER: 'FILTER',
+    CATEGORY: 'CATEGORY',
     CONFIRMATION: 'CONFIRMATION',
     SUPPLIER: 'SUPPLIER',
     BASKET: 'BASKET',

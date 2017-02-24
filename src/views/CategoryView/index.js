@@ -21,6 +21,7 @@ import NavBarContainer from '../../common/NavBarContainer';
 import GridListView from '../../common/GridListView';
 import BLButton from '../../common/BLButton';
 import ModalSpinner from '../../common/ModalSpinner';
+import NavBarBackButton from '../../common/NavBarBackButton';
 
 // Actions
 import {
@@ -31,14 +32,14 @@ import loadProducts from '../../actions/products';
 import constants from '../../utils/constants';
 import styles from './styles';
 
-class ProductsView extends Component {
+class CategoryView extends Component {
   constructor(props) {
     super(props);
     this.renderRow = this.renderRow.bind(this);
   }
   componentDidMount() {
     InteractionManager.runAfterInteractions(() => {
-      this.props.loadProducts(0, '', '');
+      this.props.loadProducts(0, this.props.category, '');
     });
   }
   renderRow(rowData) {
@@ -60,14 +61,9 @@ class ProductsView extends Component {
       <TouchableOpacity
         onPress={() => {
           this.props.selectProduct(rowData);
-          const { navigator } = this.props;
-          if (navigator) {
-            requestAnimationFrame(() => {
-              return navigator.push({
-                route: constants.routes.PRODUCT
-              });
-            });
-          }
+          this.props.navigator.push({
+            route: constants.routes.PRODUCT
+          });
         }}
         style={styles.row}
       >
@@ -84,6 +80,17 @@ class ProductsView extends Component {
     );
   }
   render() {
+    const leftItem = {
+      content: (<NavBarBackButton />),
+      onPress: () => {
+        const { navigator } = this.props;
+        if (navigator) {
+          requestAnimationFrame(() => {
+            return navigator.pop();
+          });
+        }
+      }
+    };
     const rightItem = {
       content: (<BasketCount />),
       onPress: () => {
@@ -119,7 +126,7 @@ class ProductsView extends Component {
           <Text style={styles.emptyBasketText}>{productsErrorMessage}</Text>
           <BLButton
             onPress={() => {
-              this.props.loadProducts(0, '', '');
+              this.props.loadProducts(0, this.props.category, '');
             }}
             style={{
               marginTop: 20,
@@ -149,26 +156,9 @@ class ProductsView extends Component {
     }
     return (
       <NavBarContainer
-        onTabClick={(tab) => {
-          const routeParams = tab === 'Offers'
-            ? {
-              route: constants.routes.CATEGORY,
-              category: 'OFFERS'
-            }
-            : {
-              route: constants.routes.FILTER
-            };
-          const { navigator } = this.props;
-          if (navigator) {
-            requestAnimationFrame(() => {
-              return navigator.push(routeParams);
-            });
-          }
-        }}
+        leftItem={leftItem}
         rightItem={rightItem}
-        simple={false}
-        tabs={['Categories', 'Offers']}
-        title={'BOXLIST'}
+        title={this.props.category}
       >
         <ModalSpinner
           visible={this.props.productsLoading}
@@ -181,9 +171,10 @@ class ProductsView extends Component {
   }
 }
 
-ProductsView.displayName = 'ProductsView';
+CategoryView.displayName = 'CategoryView';
 
-ProductsView.propTypes = {
+CategoryView.propTypes = {
+  category: PropTypes.string.isRequired,
   /* eslint-disable react/forbid-prop-types */
   loadProducts: PropTypes.func.isRequired,
   navigator: PropTypes.object,
@@ -198,6 +189,7 @@ ProductsView.propTypes = {
 
 export default connect((state, ownProps) => {
   return {
+    category: ownProps.category,
     navigator: ownProps.navigator,
     products: state.products.products,
     productsLoading: state.products.isLoading,
@@ -212,4 +204,4 @@ export default connect((state, ownProps) => {
       dispatch(loadProducts(page, category, query));
     }
   };
-})(ProductsView);
+})(CategoryView);
