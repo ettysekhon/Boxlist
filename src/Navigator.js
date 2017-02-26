@@ -16,6 +16,7 @@ import CheckoutView from './views/CheckoutView';
 import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
 import CategoryView from './views/CategoryView';
+import FilterView from './views/FilterView';
 
 import constants from './utils/constants';
 
@@ -56,6 +57,18 @@ const renderRoute = (route, navigator) => {
     return (
       <CategoryView
         category={route.category}
+        navigator={navigator}
+      />
+    );
+  case constants.routes.FILTER:
+    return (
+      <FilterView
+        navigator={navigator}
+      />
+    );
+  case constants.routes.PRODUCTS:
+    return (
+      <ProductsView
         navigator={navigator}
       />
     );

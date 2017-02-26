@@ -12,11 +12,14 @@ const loadProducts = (page, category, query) => {
     API.loadProducts(page, category, query)
     .then((payload) => {
       dispatch(productsSuccess({
+        category,
         products: payload.products || []
       }));
       dispatch({
         type: ActionTypes.SET_CATEGORIES,
-        payload: payload.categories,
+        payload: {
+          categories: payload.categories
+        },
         error: null
       });
     }).catch((err) => {

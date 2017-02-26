@@ -191,7 +191,7 @@ export default connect((state, ownProps) => {
   return {
     category: ownProps.category,
     navigator: ownProps.navigator,
-    products: state.products.products,
+    products: state.products.filteredProducts,
     productsLoading: state.products.isLoading,
     productsError: state.products.error
   };

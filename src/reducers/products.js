@@ -4,20 +4,27 @@ import ActionTypes from '../actions/types';
 const products = (state = {
   error: false,
   isLoading: false,
-  products: []
+  products: [],
+  filteredProducts: []
 }, action) => {
   switch (action.type) {
   case ActionTypes.PRODUCTS_REQUEST:
     return objectAssign({}, state, {
       error: false,
-      isLoading: true,
-      products: []
+      isLoading: true
     });
   case ActionTypes.PRODUCTS_SUCCESS:
+    const products = action.payload.category
+    ? state.products
+    : action.payload.products;
+    const filteredProducts = action.payload.category
+    ? action.payload.products
+    : state.filteredProducts;
     return objectAssign({}, state, {
       error: false,
       isLoading: false,
-      products: action.payload.products
+      products,
+      filteredProducts
     });
   case ActionTypes.PRODUCTS_FAILURE:
     return objectAssign({}, state, {
