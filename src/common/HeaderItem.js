@@ -47,7 +47,9 @@ class HeaderItem extends Component {
 HeaderItem.displayName = 'HeaderItem';
 
 HeaderItem.propTypes = {
-  item: PropTypes.object,
+  /* eslint-disable react/forbid-prop-types */
+  item: PropTypes.object
+  /* eslint-enable react/forbid-prop-types */
 };
 
 export default HeaderItem;

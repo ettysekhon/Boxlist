@@ -46,13 +46,14 @@ class FilterView extends Component {
         onPress={() => {
           this.selectCategory(rowData);
         }}
+        underlayColor={'transparent'}
       >
         <View>
           <View style={styles.row}>
             <EvilIcons
               color={'#CCC'}
               name={'eye'}
-              size={32}
+              size={18}
               style={styles.thumb}
             />
             <Text style={styles.text}>

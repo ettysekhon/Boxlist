@@ -18,15 +18,15 @@ const BasketCount = (props) => {
   const basketCount = count === 0
     ? null
     : (
-    <View
-      style={[styles.container, props.style]}
-    >
-      <View style={styles.countContainer}>
-        <Text style={styles.count}>
-          {count}
-        </Text>
+      <View
+        style={[styles.container, props.style]}
+      >
+        <View style={styles.countContainer}>
+          <Text style={styles.count}>
+            {count}
+          </Text>
+        </View>
       </View>
-    </View>
   );
 
   return (

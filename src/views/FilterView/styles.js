@@ -28,14 +28,14 @@ export default StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     padding: 10,
     backgroundColor: 'white',
     borderBottomWidth: 1,
     borderColor: '#F6F6F6',
   },
   thumb: {
-    width: 32,
-    height: 32,
+    alignSelf: 'center'
   },
   text: {
     flex: 1,

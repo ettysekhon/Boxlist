@@ -28,17 +28,19 @@ class Header extends React.Component {
     this.loadProducts = _.debounce(this.loadProducts.bind(this), 200);
     this.state = {
       query: ''
-    }
+    };
   }
   onSearchChange(text) {
     const state = { ...this.state, query: text };
     /* eslint-disable react/no-set-state */
     this.setState(state);
     /* eslint-enable react/no-set-state */
-    this.loadProducts(text)
+    if (text === '') {
+      this.loadProducts(0, '', '');
+    }
   }
-  loadProducts(text) {
-    this.props.loadProducts(0, '', text);
+  loadProducts() {
+    this.props.loadProducts(0, '', this.state.query);
   }
   render() {
     const { tabs, onTabClick, leftItem, title, rightItem } = this.props;
@@ -59,7 +61,6 @@ class Header extends React.Component {
             <Text style={styles.titleText}>{title}</Text>
           </View>
           <View style={styles.rightItem}>
-
             <HeaderItem
               item={rightItem}
             />
@@ -67,6 +68,7 @@ class Header extends React.Component {
         </View>
         <SearchTextInput
           onChangeText={this.onSearchChange}
+          onSubmitEditing={this.loadProducts}
           placeholder={'Search for products'}
           placeholderTextColor={'#ccc'}
           style={{
@@ -126,7 +128,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   centerItem: {
-    flex: 1,
+    flex: 2,
     height: 61,
     marginTop: -3,
     alignItems: 'center',
