@@ -13,9 +13,9 @@ import HeaderItem from './HeaderItem';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 
-const Header = ({ leftItem, title, rightItem }) => {
+const Header = ({ leftItem, title, rightItem, headerStyles }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, headerStyles]}>
       <View style={styles.leftItem}>
         <HeaderItem
           item={leftItem}
@@ -42,6 +42,7 @@ Header.displayName = 'Header';
 
 Header.propTypes = {
   /* eslint-disable react/forbid-prop-types */
+  headerStyles: PropTypes.object,
   leftItem: PropTypes.object,
   rightItem: PropTypes.object,
   /* eslint-enable react/forbid-prop-types */

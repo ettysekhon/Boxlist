@@ -22,12 +22,11 @@ const styles = StyleSheet.create({
   leftItem: {
     flexDirection: 'row',
     alignSelf: 'flex-start',
-    paddingLeft: 15
+    paddingLeft: 10
   },
   leftText: {
     fontSize: fonts.size.m,
-    color: colors.primary,
-    marginLeft: 5
+    color: colors.primary
   }
 });
 

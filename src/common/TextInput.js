@@ -35,9 +35,30 @@ export const SearchTextInput = ({ style, ...props }) => {
   );
 };
 
+export const TextInput = ({ style, ...props }) => {
+  const newProps = {
+    autoCorrect: false,
+    enablesReturnKeyAutomatically: true,
+    keyboardType: 'default',
+    autoCapitalize: 'none',
+    placeholderTextColor: 'rgb(155,155,155)',
+    underlineColorAndroid: '#9013FE'
+  };
+  return (
+    <RNTextInput
+      style={[styles.textInput, style]}
+      {...props}
+      {...newProps}
+    />
+  );
+};
+
 
 /* eslint-disable react/forbid-prop-types */
 SearchTextInput.propTypes = {
+  style: React.PropTypes.object
+};
+TextInput.propTypes = {
   style: React.PropTypes.object
 };
 /* eslint-enable react/forbid-prop-types */

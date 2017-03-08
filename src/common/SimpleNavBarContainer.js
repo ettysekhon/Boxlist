@@ -12,6 +12,10 @@ import Header from './Header';
 const SimpleNavBarContainer = (props) => {
   const header = (
     <Header
+      headerStyles={{
+        backgroundColor: '#fff',
+        borderBottomWidth: 0
+      }}
       leftItem={props.leftItem}
       rightItem={props.rightItem}
     />

@@ -14,9 +14,9 @@ const NavBarCloseIcon = (props) => {
       style={styles.rightItem}
     >
       <EvilIcons
-        color={colors.dark.color}
+        color={colors.primary}
         name={'close'}
-        size={30}
+        size={20}
       />
     </View>
   );
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   rightItem: {
     flexDirection: 'row',
     alignSelf: 'flex-end',
-    paddingRight: 15
+    paddingRight: 10
   },
 });
 

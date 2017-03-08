@@ -5,13 +5,13 @@ import React, {
 
 import {
   StyleSheet,
-  Text,
   View
 } from 'react-native';
 
-import SimpleNavBarContainer from './common/SimpleNavBarContainer';
-import NavBarTextLeftButton from './common/NavBarTextLeftButton';
-import NavBarCloseIcon from './common/NavBarCloseIcon';
+import SimpleNavBarContainer from '../../common/SimpleNavBarContainer';
+import NavBarTextLeftButton from '../../common/NavBarTextLeftButton';
+import NavBarCloseIcon from '../../common/NavBarCloseIcon';
+import PersonalDetailsSection from './PersonalDetailsSection';
 
 /* eslint-disable react/prefer-stateless-function */
 class RegisterView extends Component {
@@ -32,7 +32,7 @@ class RegisterView extends Component {
       onPress: () => {
       }
     };
-    const content = (<Text>Register View</Text>);
+    const content = (<PersonalDetailsSection />);
 
     return (
       <SimpleNavBarContainer
@@ -61,9 +61,6 @@ RegisterView.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 30,
-    paddingLeft: 10,
-    paddingRight: 10,
     flex: -1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
