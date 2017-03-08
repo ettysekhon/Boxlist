@@ -5,6 +5,7 @@ import React, {
 
 import {
   StyleSheet,
+  ScrollView,
   View
 } from 'react-native';
 
@@ -13,6 +14,7 @@ import NavBarTextLeftButton from '../../common/NavBarTextLeftButton';
 import NavBarCloseIcon from '../../common/NavBarCloseIcon';
 import PersonalDetailsSection from './PersonalDetailsSection';
 import CompanyRegistrationSection from './CompanyRegistrationSection';
+import PrimaryBusinessAddressSection from './PrimaryBusinessAddressSection';
 
 /* eslint-disable react/prefer-stateless-function */
 class RegisterView extends Component {
@@ -38,21 +40,27 @@ class RegisterView extends Component {
         <View style={{ marginBottom: 20 }}>
           <PersonalDetailsSection />
         </View>
-        <CompanyRegistrationSection />
+        <View style={{ marginBottom: 20 }}>
+          <CompanyRegistrationSection />
+        </View>
+        <View style={{ marginBottom: 20 }}>
+          <PrimaryBusinessAddressSection />
+        </View>
       </View>);
-
     return (
       <SimpleNavBarContainer
         leftItem={leftItem}
         rightItem={rightItem}
       >
-        <View
-          style={styles.container}
-        >
-          {
-            content
-          }
-        </View>
+        <ScrollView>
+          <View
+            style={styles.container}
+          >
+            {
+              content
+            }
+          </View>
+        </ScrollView>
       </SimpleNavBarContainer>
     );
   }
