@@ -12,6 +12,7 @@ import SimpleNavBarContainer from '../../common/SimpleNavBarContainer';
 import NavBarTextLeftButton from '../../common/NavBarTextLeftButton';
 import NavBarCloseIcon from '../../common/NavBarCloseIcon';
 import PersonalDetailsSection from './PersonalDetailsSection';
+import CompanyRegistrationSection from './CompanyRegistrationSection';
 
 /* eslint-disable react/prefer-stateless-function */
 class RegisterView extends Component {
@@ -32,7 +33,13 @@ class RegisterView extends Component {
       onPress: () => {
       }
     };
-    const content = (<PersonalDetailsSection />);
+    const content = (
+      <View>
+        <View style={{ marginBottom: 20 }}>
+          <PersonalDetailsSection />
+        </View>
+        <CompanyRegistrationSection />
+      </View>);
 
     return (
       <SimpleNavBarContainer
