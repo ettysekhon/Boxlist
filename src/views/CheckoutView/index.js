@@ -64,7 +64,9 @@ class CheckoutView extends Component {
   handleChange(name, e) {
     /* eslint-disable max-len */
     const mobileRegEx = /(^\+(?!44)[0-9]{7,15}$)|(^(\+440?|0)(([27][0-9]{9}$)|(1[1-9][0-9]{7,8}$)))/;
+    /* eslint-disable no-useless-escape */
     const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    /* eslint-enable no-useless-escape */
     /* eslint-enable max-len */
     const value = {};
     value[name] = e.nativeEvent.text;
@@ -88,11 +90,11 @@ class CheckoutView extends Component {
         style={styles.productImage}
       />)
       : (
-      <Image
-        resizeMode={'contain'}
-        source={{ uri: rowData.images }}
-        style={styles.productImage}
-      />
+        <Image
+          resizeMode={'contain'}
+          source={{ uri: rowData.images }}
+          style={styles.productImage}
+        />
     );
     /* eslint-enable global-require */
     return (

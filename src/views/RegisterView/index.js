@@ -9,6 +9,7 @@ import {
   View
 } from 'react-native';
 
+import BLButton from '../../common/BLButton';
 import SimpleNavBarContainer from '../../common/SimpleNavBarContainer';
 import NavBarTextLeftButton from '../../common/NavBarTextLeftButton';
 import NavBarCloseIcon from '../../common/NavBarCloseIcon';
@@ -45,6 +46,29 @@ class RegisterView extends Component {
         </View>
         <View style={{ marginBottom: 20 }}>
           <PrimaryBusinessAddressSection />
+        </View>
+        <View
+          style={{
+            paddingHorizontal: 10
+          }}
+        >
+          <BLButton
+            onPress={() => {}}
+            style={{
+              marginTop: 20,
+              paddingLeft: 7.5,
+              paddingRight: 7.5,
+              backgroundColor: 'rgb(80,227,194)'
+            }}
+            text={'Continue Shopping'}
+            textStyle={{
+              fontSize: 14
+            }}
+          >
+            {
+              'Submit Application'
+            }
+          </BLButton>
         </View>
       </View>);
     return (

@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 18,
     color: 'rgb(74,74,74)',
-    marginBottom: 10
+    marginBottom: 10,
+    paddingLeft: 10
   }
 });
 
