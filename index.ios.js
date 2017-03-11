@@ -1,7 +1,6 @@
 import { AppRegistry } from 'react-native';
-// import setup from './src/setup';
-import RegisterView from './src/views/RegisterView';
+import setup from './src/setup';
 
 AppRegistry.registerComponent('Boxlist', () => {
-  return RegisterView;
+  return setup;
 });

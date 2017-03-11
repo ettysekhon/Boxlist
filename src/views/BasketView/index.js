@@ -130,11 +130,12 @@ class BasketView extends Component {
             paddingRight: 7.5,
             backgroundColor: 'rgb(80,227,194)'
           }}
-          text={'Continue Shopping'}
           textStyle={{
             fontSize: 14
           }}
-        />
+        >
+          {'Continue Shopping'}
+        </BLButton>
       </View>
     )
     : (
@@ -207,11 +208,12 @@ class BasketView extends Component {
               paddingRight: 7.5,
               backgroundColor: 'rgb(80,227,194)'
             }}
-            text={'Checkout securely'}
             textStyle={{
               fontSize: 14
             }}
-          />
+          >
+            {'Checkout securely'}
+          </BLButton>
         </View>
       </ScrollView>
     );

@@ -75,11 +75,12 @@ class ConfirmationView extends Component {
                 paddingRight: 7.5,
                 backgroundColor: 'rgb(80,227,194)'
               }}
-              text={'Continue Shopping'}
               textStyle={{
                 fontSize: 14
               }}
-            />
+            >
+              {'Continue Shopping'}
+            </BLButton>
             <Text
               style={styles.header}
             >Collection details</Text>

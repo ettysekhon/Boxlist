@@ -103,11 +103,12 @@ class ProductView extends Component {
             paddingRight: 7.5,
             backgroundColor: 'rgb(80,227,194)'
           }}
-          text={'Add to Basket'}
           textStyle={{
             fontSize: 14
           }}
-        />
+        >
+          {'Add to Basket'}
+        </BLButton>
         <Text
           style={styles.productSupplier}
         >{`Supplied By: ${product.supplier}`}</Text>

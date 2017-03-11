@@ -17,10 +17,21 @@ import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
 import CategoryView from './views/CategoryView';
 import FilterView from './views/FilterView';
+import RegisterView from './views/RegisterView';
 
 import constants from './utils/constants';
 
 // TODO: refactor navigator
+const configureRoute = (route) => {
+  if (Platform.OS === 'android') {
+    return Navigator.SceneConfigs.FloatFromBottomAndroid;
+  }
+  if (route.route === constants.routes.REGISTER) {
+    return Navigator.SceneConfigs.FloatFromBottom;
+  }
+  return Navigator.SceneConfigs.PushFromRight;
+};
+
 const renderRoute = (route, navigator) => {
   switch (route.route) {
   case constants.routes.CONFIRMATION:
@@ -63,6 +74,12 @@ const renderRoute = (route, navigator) => {
   case constants.routes.FILTER:
     return (
       <FilterView
+        navigator={navigator}
+      />
+    );
+  case constants.routes.REGISTER:
+    return (
+      <RegisterView
         navigator={navigator}
       />
     );
@@ -118,12 +135,7 @@ class BoxListNavigator extends Component {
   render() {
     return (
       <Navigator
-        configureScene={(route) => {
-          if (Platform.OS === 'android') {
-            return Navigator.SceneConfigs.FloatFromBottomAndroid;
-          }
-          return Navigator.SceneConfigs.PushFromRight;
-        }}
+        configureScene={configureRoute}
         initialRoute={{
           route: 'PRODUCTS'
         }}

@@ -175,11 +175,12 @@ class CheckoutView extends Component {
               paddingRight: 7.5,
               backgroundColor: 'rgb(80,227,194)'
             }}
-            text={'Continue Shopping'}
             textStyle={{
               fontSize: 14
             }}
-          />
+          >
+            {'Continue Shopping'}
+          </BLButton>
         </View>
       );
     }
@@ -365,11 +366,12 @@ class CheckoutView extends Component {
                 paddingRight: 7.5,
                 backgroundColor: 'rgb(80,227,194)'
               }}
-              text={'Place order'}
               textStyle={{
                 fontSize: 14
               }}
-            />
+            >
+              {'Place order'}
+            </BLButton>
           </View>
         </ScrollView>
       </NavBarContainer>

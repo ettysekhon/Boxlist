@@ -127,11 +127,12 @@ class ProductsView extends Component {
               paddingRight: 7.5,
               backgroundColor: 'rgb(80,227,194)'
             }}
-            text={'Retry'}
             textStyle={{
               fontSize: 14
             }}
-          />
+          >
+            {'Retry'}
+          </BLButton>
         </View>
       );
     } else {
