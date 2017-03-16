@@ -10,6 +10,7 @@ module.exports = {
   // SYNC.
   // -------------------------------------------------------------------------->
   ADD_PRODUCT: 'ADD_PRODUCT',
+  SELECT_DELIVERY_OPTION: 'SELECT_DELIVERY_OPTION',
   REMOVE_PRODUCT: 'REMOVE_PRODUCT',
   SELECT_PRODUCT: 'SELECT_PRODUCT',
   CLEAR_BASKET: 'CLEAR_BASKET',

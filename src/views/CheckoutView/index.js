@@ -185,6 +185,16 @@ class CheckoutView extends Component {
       );
     }
 
+    const deliveryOptions = this.props.deliveryOptions.map((d, i) => {
+      return (
+        <RadioButton
+          isChecked={d.selected}
+          key={i}
+          title={d.title}
+        />
+      );
+    });
+
     const leftItem = {
       content: (<NavBarBackButton />),
       onPress: () => {
@@ -229,10 +239,9 @@ class CheckoutView extends Component {
             <View
               style={styles.deliveryOptions}
             >
-              <RadioButton
-                isChecked
-                title={'Collect in store'}
-              />
+              {
+                deliveryOptions
+              }
               <Text
                 style={[styles.supplier, {
                   paddingTop: 0
@@ -385,6 +394,7 @@ CheckoutView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
   basketItems: PropTypes.array,
   basketTotal: PropTypes.string,
+  deliveryOptions: PropTypes.array,
   navigator: PropTypes.object.isRequired,
   /* eslint-enable react/forbid-prop-types */
   removeProduct: PropTypes.func.isRequired,
@@ -394,6 +404,7 @@ CheckoutView.propTypes = {
 
 export default connect((state, ownProps) => {
   return {
+    deliveryOptions: state.basket.deliveryOptions,
     basketItems: state.basket.basketItems,
     basketTotal: state.basket.total,
     navigator: ownProps.navigator,

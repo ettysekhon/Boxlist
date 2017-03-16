@@ -14,17 +14,15 @@ const products = (state = {
       isLoading: true
     });
   case ActionTypes.PRODUCTS_SUCCESS:
-    const products = action.payload.category
-    ? state.products
-    : action.payload.products;
-    const filteredProducts = action.payload.category
-    ? action.payload.products
-    : state.filteredProducts;
     return objectAssign({}, state, {
       error: false,
       isLoading: false,
-      products,
-      filteredProducts
+      products: action.payload.category
+        ? state.products
+        : action.payload.products,
+      filteredProducts: action.payload.category
+        ? action.payload.products
+        : state.filteredProducts
     });
   case ActionTypes.PRODUCTS_FAILURE:
     return objectAssign({}, state, {

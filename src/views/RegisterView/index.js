@@ -9,6 +9,8 @@ import {
   View
 } from 'react-native';
 
+import { connect } from 'react-redux';
+
 import BLButton from '../../common/BLButton';
 import SimpleNavBarContainer from '../../common/SimpleNavBarContainer';
 import NavBarTextLeftButton from '../../common/NavBarTextLeftButton';
@@ -16,6 +18,8 @@ import NavBarCloseIcon from '../../common/NavBarCloseIcon';
 import PersonalDetailsSection from './PersonalDetailsSection';
 import CompanyRegistrationSection from './CompanyRegistrationSection';
 import PrimaryBusinessAddressSection from './PrimaryBusinessAddressSection';
+
+import constants from '../../utils/constants';
 
 /* eslint-disable react/prefer-stateless-function */
 class RegisterView extends Component {
@@ -34,6 +38,12 @@ class RegisterView extends Component {
     const rightItem = {
       content: (<NavBarCloseIcon />),
       onPress: () => {
+        const { navigator } = this.props;
+        if (navigator) {
+          requestAnimationFrame(() => {
+            return navigator.pop();
+          });
+        }
       }
     };
     const content = (
@@ -53,7 +63,16 @@ class RegisterView extends Component {
           }}
         >
           <BLButton
-            onPress={() => {}}
+            onPress={() => {
+              const { navigator } = this.props;
+              if (navigator) {
+                requestAnimationFrame(() => {
+                  return navigator.replace({
+                    route: constants.routes.CHECKOUT
+                  });
+                });
+              }
+            }}
             style={{
               marginTop: 20,
               paddingLeft: 7.5,
@@ -65,7 +84,7 @@ class RegisterView extends Component {
             }}
           >
             {
-              'Submit Application'
+              'Submit'
             }
           </BLButton>
         </View>
@@ -105,4 +124,8 @@ const styles = StyleSheet.create({
   }
 });
 
-export default RegisterView;
+export default connect((state, ownProps) => {
+  return {
+    navigator: ownProps.navigator
+  };
+}, null)(RegisterView);

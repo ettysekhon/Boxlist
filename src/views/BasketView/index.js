@@ -24,7 +24,8 @@ import NavBarBackButton from '../../common/NavBarBackButton';
 
 // Actions
 import {
-  removeProduct
+  removeProduct,
+  selectDeliveryOption
 } from '../../actions/basket';
 
 import constants from '../../utils/constants';
@@ -101,6 +102,18 @@ class BasketView extends Component {
       onPress: () => {
       }
     };
+    const deliveryOptions = this.props.deliveryOptions.map((d, i) => {
+      return (
+        <RadioButton
+          isChecked={d.selected}
+          key={i}
+          onToggle={() => {
+            this.props.selectDeliveryOption(d.title);
+          }}
+          title={d.title}
+        />
+      );
+    });
     const basketContent = this.props.basketItems.length === 0
     ? (
       <View
@@ -157,10 +170,9 @@ class BasketView extends Component {
             <Text
               style={styles.header}
             >Delivery Options</Text>
-            <RadioButton
-              isChecked
-              title={'Order online & collect in store'}
-            />
+            {
+              deliveryOptions
+            }
             <LinkObject
               onPress={() => {
                 const { navigator } = this.props;
@@ -198,9 +210,19 @@ class BasketView extends Component {
           </View>
           <BLButton
             onPress={() => {
-              this.props.navigator.push({
-                route: constants.routes.CHECKOUT
-              });
+              const { navigator, selectedDeliveryOption } = this.props;
+              if (navigator) {
+                requestAnimationFrame(() => {
+                  if (selectedDeliveryOption === 'Order online & collect in store') {
+                    return navigator.push({
+                      route: constants.routes.CHECKOUT
+                    });
+                  }
+                  return navigator.push({
+                    route: constants.routes.REGISTER
+                  });
+                });
+              }
             }}
             style={{
               marginTop: 20,
@@ -238,21 +260,29 @@ BasketView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
   basketItems: PropTypes.array,
   basketTotal: PropTypes.string,
+  deliveryOptions: PropTypes.array,
   navigator: PropTypes.object.isRequired,
   /* eslint-enable react/forbid-prop-types */
-  removeProduct: PropTypes.func.isRequired
+  removeProduct: PropTypes.func.isRequired,
+  selectDeliveryOption: PropTypes.func.isRequired,
+  selectedDeliveryOption: PropTypes.string,
 };
 
 export default connect((state, ownProps) => {
   return {
     basketItems: state.basket.basketItems,
     basketTotal: state.basket.total,
-    navigator: ownProps.navigator
+    deliveryOptions: state.basket.deliveryOptions,
+    navigator: ownProps.navigator,
+    selectedDeliveryOption: state.basket.selectedDeliveryOption
   };
 }, (dispatch) => {
   return {
     removeProduct: (product) => {
       dispatch(removeProduct(product));
+    },
+    selectDeliveryOption: (deliveryOption) => {
+      dispatch(selectDeliveryOption(deliveryOption));
     }
   };
 })(BasketView);

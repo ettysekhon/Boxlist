@@ -6,11 +6,10 @@ const categories = (state = {
 }, action) => {
   switch (action.type) {
   case ActionTypes.SET_CATEGORIES:
-    const categories = state.categories.length === 0
-      ? action.payload.categories
-      : state.categories;
     return objectAssign({}, state, {
-      categories
+      categories: state.categories.length === 0
+        ? action.payload.categories
+        : state.categories
     });
   default:
     return state;

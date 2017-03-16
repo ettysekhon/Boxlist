@@ -12,7 +12,7 @@ import FormSection from '../../common/Section';
 /* eslint-disable react/prefer-stateless-function */
 class PrimaryBusinessAddressSection extends Component {
   render() {
-    return (<FormSection title='Primary Business Address'>
+    return (<FormSection title='Delivery Address'>
       <View
         style={{
           borderColor: '#ccc',

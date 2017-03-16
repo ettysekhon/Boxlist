@@ -47,11 +47,28 @@ const getTotal = (basketItems) => {
   return Number(total).toFixed(2);
 };
 
+const getDeliveryOptions = (deliveryOptions, selectedDeliveryOption) => {
+  return deliveryOptions.map((d) => {
+    return objectAssign({},
+      d, {
+        selected: d.title === selectedDeliveryOption
+      });
+  });
+};
+
 const emptyBasket = {
   count: 0,
   selectedProduct: {},
   basketItems: [],
-  total: '0.00'
+  total: '0.00',
+  selectedDeliveryOption: 'Order online & collect in store',
+  deliveryOptions: [{
+    title: 'Order online & collect in store',
+    selected: false
+  }, {
+    title: 'Free & Fast Delivery',
+    selected: true
+  }]
 };
 
 const basket = (state = emptyBasket, action) => {
@@ -65,6 +82,13 @@ const basket = (state = emptyBasket, action) => {
       basketItems,
       count: state.count + 1,
       total: getTotal(basketItems)
+    });
+  case ActionTypes.SELECT_DELIVERY_OPTION:
+    return objectAssign({}, state, {
+      selectedDeliveryOption: action.payload.deliveryOption,
+      deliveryOptions: getDeliveryOptions(
+        state.deliveryOptions,
+        action.payload.deliveryOption)
     });
   case ActionTypes.REMOVE_PRODUCT:
     basketItems = getItems(removeProduct(state, action.payload.product));

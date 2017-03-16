@@ -12,7 +12,7 @@ import FormSection from '../../common/Section';
 /* eslint-disable react/prefer-stateless-function */
 class PersonalDetailsSection extends Component {
   render() {
-    return (<FormSection title='Personal Details'>
+    return (<FormSection title='Guest Account Details'>
       <View
         style={{
           borderColor: '#ccc',
@@ -41,23 +41,6 @@ class PersonalDetailsSection extends Component {
           onChangeText={() => {}}
           onSubmitEditing={() => {}}
           placeholder={'Email address'}
-          placeholderTextColor={'#ccc'}
-          style={{
-            borderWidth: 0
-          }}
-          value={''}
-        />
-      </View>
-      <View
-        style={{
-          borderColor: '#ccc',
-          borderBottomWidth: 1
-        }}
-      >
-        <TextInput
-          onChangeText={() => {}}
-          onSubmitEditing={() => {}}
-          placeholder={'Password'}
           placeholderTextColor={'#ccc'}
           style={{
             borderWidth: 0
