@@ -1,20 +1,21 @@
 dependencies: \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMapPolyline.m \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMapPolyline.h \
-  ../../react-native/React/Views/RCTConvert+MapKit.h \
-  ../../react-native/React/Base/RCTConvert.h \
-  ../../react-native/React/CSSLayout/CSSLayout.h \
-  ../../react-native/React/CSSLayout/CSSMacros.h \
-  ../../react-native/React/Views/RCTAnimationType.h \
-  ../../react-native/React/Views/RCTBorderStyle.h \
-  ../../react-native/React/Views/RCTTextDecorationLineType.h \
-  ../../react-native/React/Base/RCTDefines.h \
-  ../../react-native/React/Base/RCTLog.h \
-  ../../react-native/React/Base/RCTAssert.h \
-  ../../react-native/React/Views/RCTPointerEvents.h \
-  ../../react-native/React/Views/RCTComponent.h \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMapCoordinate.h \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMap.h \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/Callout/SMCalloutView.h \
-  ../../react-native/React/Views/RCTView.h \
-  ../../react-native/React/Views/UIView+React.h
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMapPolyline.m \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMapPolyline.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert+MapKit.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTView.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMapCoordinate.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/AIRMap.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native-maps/ios/AirMaps/Callout/SMCalloutView.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h

@@ -16,7 +16,6 @@ export const create = (styles) => {
     }
     if (android && Platform.OS === 'android') {
       style = { ...style, ...android };
-      console.warn('style', style);
     }
     platformStyles[name] = style;
   });

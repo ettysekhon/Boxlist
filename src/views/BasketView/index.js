@@ -114,6 +114,9 @@ class BasketView extends Component {
         />
       );
     });
+    const supplierDetails = this.props.selectedDeliveryOption === 'Order online & collect in store'
+      ? '> View supplier details for collection'
+      : '> View supplier details';
     const basketContent = this.props.basketItems.length === 0
     ? (
       <View
@@ -187,7 +190,7 @@ class BasketView extends Component {
             >
               <Text
                 style={styles.supplierLink}
-              >{'> View supplier details for collection'}</Text>
+              >{supplierDetails}</Text>
             </LinkObject>
             <Text
               style={styles.supplier}

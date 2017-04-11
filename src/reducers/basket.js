@@ -64,10 +64,10 @@ const emptyBasket = {
   selectedDeliveryOption: 'Order online & collect in store',
   deliveryOptions: [{
     title: 'Order online & collect in store',
-    selected: false
+    selected: true
   }, {
     title: 'Free & Fast Delivery',
-    selected: true
+    selected: false
   }]
 };
 

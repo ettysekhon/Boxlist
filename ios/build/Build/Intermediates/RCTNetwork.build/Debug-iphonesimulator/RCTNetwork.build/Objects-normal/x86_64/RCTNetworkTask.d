@@ -1,8 +1,10 @@
 dependencies: \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Network/RCTNetworkTask.m \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Network/RCTNetworkTask.h \
-  ../../React/Base/RCTURLRequestDelegate.h \
-  ../../React/Base/RCTURLRequestHandler.h \
-  ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h \
-  ../../React/Base/RCTLog.h ../../React/Base/RCTAssert.h \
-  ../../React/Base/RCTUtils.h
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native/Libraries/Network/RCTNetworkTask.m \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTNetworkTask.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h

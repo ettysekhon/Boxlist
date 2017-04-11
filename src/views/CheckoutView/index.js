@@ -32,19 +32,43 @@ import {
 
 import styles from './styles';
 
+const getValidStatus = (state) => {
+  /* eslint-disable max-len */
+  const mobileRegEx = /(^\+(?!44)[0-9]{7,15}$)|(^(\+440?|0)(([27][0-9]{9}$)|(1[1-9][0-9]{7,8}$)))/;
+  /* eslint-disable no-useless-escape */
+  const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  /* eslint-enable no-useless-escape */
+  /* eslint-enable max-len */
+  const validMobile = state.mobile === '' || mobileRegEx.test(state.mobile);
+  const validEmail = state.emailAddress === '' || emailRegEx.test(state.emailAddress);
+  const isEmpty = state.emailAddress === '' ||
+    state.mobile === '' || state.name === '';
+  return {
+    disabled: isEmpty || !validEmail || !validMobile,
+    validEmail,
+    validMobile
+  };
+};
+
 /* eslint-disable react/no-multi-comp */
 class CheckoutView extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      emailAddress: '',
-      mobile: '',
+    const account = this.props.account;
+    const state = {
+      emailAddress: account.emailAddress,
+      mobile: account.mobile,
       message: '',
-      name: '',
-      disabled: true,
+      name: account.fullName,
+      disabled: this.props.selectedDeliveryOption === 'Order online & collect in store',
       validEmail: true,
       validMobile: true
     };
+    const valid = getValidStatus(state);
+    state.disabled = valid.disabled;
+    state.validEmail = valid.validEmail;
+    state.validMobile = valid.validMobile;
+    this.state = state;
     this.renderRow = this.renderRow.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
@@ -62,22 +86,15 @@ class CheckoutView extends Component {
     this.props.placeOrder(order, this.props.navigator);
   }
   handleChange(name, e) {
-    /* eslint-disable max-len */
-    const mobileRegEx = /(^\+(?!44)[0-9]{7,15}$)|(^(\+440?|0)(([27][0-9]{9}$)|(1[1-9][0-9]{7,8}$)))/;
-    /* eslint-disable no-useless-escape */
-    const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    /* eslint-enable no-useless-escape */
-    /* eslint-enable max-len */
     const value = {};
     value[name] = e.nativeEvent.text;
     const state = objectAssign({}, this.state, value);
-    const validMobile = state.mobile === '' || mobileRegEx.test(state.mobile);
-    const validEmail = state.emailAddress === '' || emailRegEx.test(state.emailAddress);
-    const isEmpty = state.emailAddress === '' ||
-      state.mobile === '' || state.name === '';
-    state.disabled = isEmpty || !validEmail || !validMobile;
-    state.validEmail = validEmail;
-    state.validMobile = validMobile;
+    if (this.props.selectedDeliveryOption === 'Order online & collect in store') {
+      const valid = getValidStatus(state);
+      state.disabled = valid.disabled;
+      state.validEmail = valid.validEmail;
+      state.validMobile = valid.validMobile;
+    }
     /* eslint-disable react/no-set-state */
     this.setState(state);
     /* eslint-enable react/no-set-state */
@@ -219,6 +236,74 @@ class CheckoutView extends Component {
         }
       }
     };
+    const checkoutAddress = (companyName, address) => {
+      const street2 = address.street2 ? `, ${address.street2}` : '';
+      const lines = [
+        companyName,
+        `${address.street1}${street2}`,
+        `${address.townCity}, ${address.postalCode}`,
+      ];
+      return lines.map((line, index) => {
+        const style = index === 0 ? [styles.supplier, {
+          paddingTop: 0
+        }] : styles.supplier;
+        return (
+          <Text
+            key={index}
+            style={style}
+          >{line}</Text>
+        );
+      });
+    };
+    const deliveryCollectionInstruction =
+      this.props.selectedDeliveryOption === 'Order online & collect in store'
+      ? 'Collection Instruction'
+      : 'Delivery Instruction';
+    const collectionForm = this.props.selectedDeliveryOption === 'Order online & collect in store'
+      ? (
+        <View>
+          <Text
+            style={styles.header}
+          >Name</Text>
+          <TextInput
+            autoCapitalize={'none'}
+            autoCorrect={false}
+            keyboardType={'default'}
+            onChange={this.handleChange.bind(this, 'name')}
+            placeholder={'Enter name'}
+            placeholderTextColor={'rgb(155,155,155)'}
+            style={styles.textInput}
+            value={this.state.name}
+          />
+          <Text
+            style={styles.header}
+          >Mobile</Text>
+          <TextInput
+            autoCapitalize={'none'}
+            autoCorrect={false}
+            keyboardType={'numeric'}
+            onChange={this.handleChange.bind(this, 'mobile')}
+            placeholder={'Enter mobile phone number'}
+            placeholderTextColor={'rgb(155,155,155)'}
+            style={styles.textInput}
+            value={this.state.mobile}
+          />
+          <Text
+            style={styles.header}
+          >Email</Text>
+          <TextInput
+            autoCapitalize={'none'}
+            autoCorrect={false}
+            keyboardType={'email-address'}
+            onChange={this.handleChange.bind(this, 'emailAddress')}
+            placeholder={'Enter email address'}
+            placeholderTextColor={'rgb(155,155,155)'}
+            style={styles.textInput}
+            value={this.state.emailAddress}
+          />
+        </View>
+    )
+    : null;
     return (
       <NavBarContainer
         leftItem={leftItem}
@@ -242,24 +327,16 @@ class CheckoutView extends Component {
               {
                 deliveryOptions
               }
-              <Text
-                style={[styles.supplier, {
-                  paddingTop: 0
-                }]}
-              >{'FG Halladeys & Sons, Unit 11'}</Text>
-              <Text
-                style={styles.supplier}
-              >{'Orient Ind Park, Simonds Rd,'}</Text>
-              <Text
-                style={styles.supplier}
-              >{'London. E10 7DE'}</Text>
+              {
+                checkoutAddress(this.props.companyName, this.props.address)
+              }
             </View>
             <View
               style={styles.deliveryInstructions}
             >
               <Text
                 style={styles.header}
-              >Delivery/Collection Instruction</Text>
+              >{deliveryCollectionInstruction}</Text>
               <TextInput
                 autoCapitalize={'none'}
                 autoCorrect={false}
@@ -271,45 +348,9 @@ class CheckoutView extends Component {
                 style={styles.textArea}
                 value={this.state.message}
               />
-              <Text
-                style={styles.header}
-              >Name</Text>
-              <TextInput
-                autoCapitalize={'none'}
-                autoCorrect={false}
-                keyboardType={'default'}
-                onChange={this.handleChange.bind(this, 'name')}
-                placeholder={'Enter name'}
-                placeholderTextColor={'rgb(155,155,155)'}
-                style={styles.textInput}
-                value={this.state.name}
-              />
-              <Text
-                style={styles.header}
-              >Mobile</Text>
-              <TextInput
-                autoCapitalize={'none'}
-                autoCorrect={false}
-                keyboardType={'numeric'}
-                onChange={this.handleChange.bind(this, 'mobile')}
-                placeholder={'Enter mobile phone number'}
-                placeholderTextColor={'rgb(155,155,155)'}
-                style={styles.textInput}
-                value={this.state.mobile}
-              />
-              <Text
-                style={styles.header}
-              >Email</Text>
-              <TextInput
-                autoCapitalize={'none'}
-                autoCorrect={false}
-                keyboardType={'email-address'}
-                onChange={this.handleChange.bind(this, 'emailAddress')}
-                placeholder={'Enter email address'}
-                placeholderTextColor={'rgb(155,155,155)'}
-                style={styles.textInput}
-                value={this.state.emailAddress}
-              />
+              {
+                collectionForm
+              }
             </View>
             <View
               style={styles.totalSection}
@@ -392,23 +433,31 @@ CheckoutView.displayName = 'CheckoutView';
 
 CheckoutView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
+  account: PropTypes.object.isRequired,
+  address: PropTypes.object.isRequired,
   basketItems: PropTypes.array,
   basketTotal: PropTypes.string,
+  companyName: PropTypes.string,
   deliveryOptions: PropTypes.array,
   navigator: PropTypes.object.isRequired,
   /* eslint-enable react/forbid-prop-types */
   removeProduct: PropTypes.func.isRequired,
+  selectedDeliveryOption: PropTypes.string,
   placeOrder: PropTypes.func.isRequired,
   placingOrder: PropTypes.bool
 };
 
 export default connect((state, ownProps) => {
   return {
+    account: state.app.account,
     deliveryOptions: state.basket.deliveryOptions,
     basketItems: state.basket.basketItems,
     basketTotal: state.basket.total,
     navigator: ownProps.navigator,
     placingOrder: state.checkout.isLoading,
+    selectedDeliveryOption: state.basket.selectedDeliveryOption,
+    companyName: state.checkout.companyName,
+    address: state.checkout.address,
   };
 }, (dispatch) => {
   return {

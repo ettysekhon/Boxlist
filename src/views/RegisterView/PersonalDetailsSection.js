@@ -1,5 +1,6 @@
 import React, {
-  Component
+  Component,
+  PropTypes
 } from 'react';
 
 import {
@@ -12,6 +13,12 @@ import FormSection from '../../common/Section';
 /* eslint-disable react/prefer-stateless-function */
 class PersonalDetailsSection extends Component {
   render() {
+    const {
+      emailAddress,
+      fullName,
+      mobile,
+      onChange
+    } = this.props;
     return (<FormSection title='Guest Account Details'>
       <View
         style={{
@@ -21,14 +28,14 @@ class PersonalDetailsSection extends Component {
         }}
       >
         <TextInput
-          onChangeText={() => {}}
+          onChangeText={onChange.bind(this, 'fullName')}
           onSubmitEditing={() => {}}
           placeholder={'Full name'}
           placeholderTextColor={'#ccc'}
           style={{
             borderWidth: 0
           }}
-          value={''}
+          value={fullName}
         />
       </View>
       <View
@@ -38,14 +45,13 @@ class PersonalDetailsSection extends Component {
         }}
       >
         <TextInput
-          onChangeText={() => {}}
-          onSubmitEditing={() => {}}
+          onChangeText={onChange.bind(this, 'emailAddress')}
           placeholder={'Email address'}
           placeholderTextColor={'#ccc'}
           style={{
             borderWidth: 0
           }}
-          value={''}
+          value={emailAddress}
         />
       </View>
       <View
@@ -55,14 +61,13 @@ class PersonalDetailsSection extends Component {
         }}
       >
         <TextInput
-          onChangeText={() => {}}
-          onSubmitEditing={() => {}}
-          placeholder={'Phone number'}
+          onChangeText={onChange.bind(this, 'mobile')}
+          placeholder={'Mobile'}
           placeholderTextColor={'#ccc'}
           style={{
             borderWidth: 0
           }}
-          value={''}
+          value={mobile}
         />
       </View>
     </FormSection>);
@@ -70,5 +75,12 @@ class PersonalDetailsSection extends Component {
 }
 
 PersonalDetailsSection.displayName = 'PersonalDetailsSection';
+
+PersonalDetailsSection.propTypes = {
+  emailAddress: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  mobile: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default PersonalDetailsSection;

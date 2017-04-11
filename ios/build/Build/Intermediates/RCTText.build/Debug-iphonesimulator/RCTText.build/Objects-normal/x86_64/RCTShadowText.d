@@ -1,22 +1,34 @@
 dependencies: \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTShadowText.m \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTShadowText.h \
-  ../../React/Views/RCTShadowView.h ../../React/CSSLayout/CSSLayout.h \
-  ../../React/CSSLayout/CSSMacros.h ../../React/Views/RCTComponent.h \
-  ../../React/Base/RCTRootView.h ../../React/Base/RCTBridge.h \
-  ../../React/Base/RCTBridgeDelegate.h \
-  ../../React/Base/RCTJavaScriptLoader.h \
-  ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h \
-  ../../React/Base/RCTFrameUpdate.h ../../React/Base/RCTInvalidating.h \
-  ../../React/Views/RCTTextDecorationLineType.h \
-  ../../React/Modules/RCTAccessibilityManager.h \
-  ../../React/Base/RCTConvert.h ../../React/Views/RCTAnimationType.h \
-  ../../React/Views/RCTBorderStyle.h ../../React/Base/RCTLog.h \
-  ../../React/Base/RCTAssert.h ../../React/Views/RCTPointerEvents.h \
-  ../../React/Views/RCTFont.h \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTText.h \
-  /Users/sekhoe01/rockstar/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTTextView.h \
-  ../../React/Views/RCTView.h ../../React/Views/UIView+React.h \
-  ../../React/Modules/RCTUIManager.h ../../React/Views/RCTViewManager.h \
-  ../../React/Base/RCTEventDispatcher.h ../../React/Base/RCTUtils.h
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTShadowText.m \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAccessibilityManager.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFont.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManager.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/node_modules/react-native/Libraries/Text/RCTTextView.h \
+  /Users/sekhoe01/develop/react-native-projects/Boxlist/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTView.h

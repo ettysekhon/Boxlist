@@ -9,7 +9,9 @@ module.exports = {
   PLACE_ORDER_SUCCESS: 'PLACE_ORDER_SUCCESS',
   // SYNC.
   // -------------------------------------------------------------------------->
+  APP_BOOTSTRAP: 'APP_BOOTSTRAP',
   ADD_PRODUCT: 'ADD_PRODUCT',
+  SET_ACCOUNT: 'SET_ACCOUNT',
   SELECT_DELIVERY_OPTION: 'SELECT_DELIVERY_OPTION',
   REMOVE_PRODUCT: 'REMOVE_PRODUCT',
   SELECT_PRODUCT: 'SELECT_PRODUCT',

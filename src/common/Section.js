@@ -19,7 +19,7 @@ const FormSection = ({ title, children }) => {
     </Text>
   );
   return (
-    <View style={styles.container}>
+    <View>
       {
         header
       }
@@ -40,10 +40,6 @@ FormSection.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderColor: 'red'
-  },
   header: {
     fontSize: 18,
     color: 'rgb(74,74,74)',

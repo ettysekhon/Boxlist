@@ -128,23 +128,29 @@
   8. Payments
   9. Accounts (7 days)
   10. Dashboard ()
-  
+
 1. Filtering, Categories = 4 + 7
-2. Search = 7 
+2. Search = 7
 3. Analytics = 5
-4. Dashboard = 
+4. Dashboard =
 5. Notifications = 3
 6. Improved scrapper = 5
 7. Accounts = 7
-8. Payments = 21 
+8. Payments = 21
 9. Unknown = 7
 
-1. Categories
-2. Search
-3. Filtering
+1. Categories [DONE]
+2. Search [DONE]
+3. Filtering [DONE]
 4. Analytics
 5. Dashboard
 6. Notifications
 7. Improved scrapper
 8. Payments
 9. Accounts
+
+
+ANALYTICS - MOBILE ANALYTICS
+ORDER - EMAIL -> RECIPIENTS
+IMPROVED SCRAPPER
+PAGINATION

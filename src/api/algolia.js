@@ -24,7 +24,6 @@ const search = (page, category, query) => {
         hitsPerPage: 100
       }, (err, content) => {
         if (err) {
-          console.error('error searching algolia', err);
           reject(err);
           return;
         }
