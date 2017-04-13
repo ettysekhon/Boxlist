@@ -17,5 +17,6 @@ module.exports = {
   SELECT_PRODUCT: 'SELECT_PRODUCT',
   CLEAR_BASKET: 'CLEAR_BASKET',
   SET_CATEGORIES: 'SET_CATEGORIES',
+  SET_ADDRESS_LOCATION: 'SET_ADDRESS_LOCATION'
   // -------------------------------------------------------------------------->
 };

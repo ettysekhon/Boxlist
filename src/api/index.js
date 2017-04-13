@@ -1,5 +1,6 @@
 import objectAssign from 'object-assign';
 import algolia from './algolia';
+import postcode from './postcode';
 // TODO: remove this hack when fixed in later version of react-native
 // http://stackoverflow.com/questions/38077273/react-native-fect-network-request-failed-not-using-localhost
 
@@ -113,7 +114,13 @@ const loadProducts = (page, category, query) => {
   });
 };
 
+const getLocationDetails = (postCode) => {
+  return postcode.getLngLat(postCode);
+};
+
+
 export default {
+  getLocationDetails,
   loadProducts,
   placeOrder
 };

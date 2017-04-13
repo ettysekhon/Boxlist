@@ -1,7 +1,7 @@
 import objectAssign from 'object-assign';
 import ActionTypes from '../actions/types';
 
-const checkout = (state = {
+const emptyCheckout = {
   error: false,
   isLoading: false,
   selectedDeliveryOption: 'Order online & collect in store',
@@ -11,9 +11,17 @@ const checkout = (state = {
     street2: 'Simonds Rd',
     townCity: 'London',
     postalCode: 'E10 7DE'
+  },
+  addressLocation: {
+    latitude: 51.5639151,
+    longitude: 0.0692
   }
-}, action) => {
+};
+
+const checkout = (state = emptyCheckout, action) => {
   switch (action.type) {
+  case ActionTypes.CLEAR_BASKET:
+    return objectAssign({}, emptyCheckout);
   case ActionTypes.SET_ACCOUNT:
     return { ...state,
       address: {
@@ -34,6 +42,13 @@ const checkout = (state = {
       },
       companyName: action.payload.companyName,
       selectedDeliveryOption: action.payload.deliveryOption
+    };
+  case ActionTypes.SET_ADDRESS_LOCATION:
+    return { ...state,
+      addressLocation: {
+        latitude: action.payload.latitude,
+        longitude: action.payload.longitude
+      }
     };
   case ActionTypes.PLACE_ORDER_SUCCESS:
     return objectAssign({}, state, {

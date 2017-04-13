@@ -35,13 +35,11 @@ const displayAddress = (companyName, address) => {
 
 /* eslint-disable react/no-multi-comp */
 class ConfirmationView extends Component {
-  componentDidMount() {
-    this.props.clearBasket();
-  }
   render() {
     const leftItem = {
       content: (<NavBarBackButton />),
       onPress: () => {
+        this.props.clearBasket();
         const { navigator } = this.props;
         if (navigator) {
           requestAnimationFrame(() => {
@@ -56,13 +54,10 @@ class ConfirmationView extends Component {
       ? 'Your order has been placed with the supplier and will be confirmed shortly, you will receive a message to let you know order is ready for pickup.'
       : 'Your order has been placed with the supplier and will be confirmed shortly, you will receive a message to let you know order is ready to deliver.';
     /* eslint-disable max-len */
-    const map = this.props.selectedDeliveryOption === 'Order online & collect in store'
-      ? (<Map />)
-      : null;
     const deliveryCollectionTitle = this.props.selectedDeliveryOption === 'Order online & collect in store'
       ? 'Collection Details'
       : 'Delivery Details';
-    const collectionDetails = this.props.selectedDeliveryOption === ''
+    const collectionDetails = this.props.selectedDeliveryOption === 'Order online & collect in store'
       ? (
         <View>
           <Text
@@ -107,9 +102,12 @@ class ConfirmationView extends Component {
         </View>
       )
       : null;
-    const stylesDescription = this.props.selectedDeliveryOption === 'Order online & collect in store'
-      ? styles.description
-      : [styles.description, { marginBottom: 10 }];
+    const addressTitle = this.props.selectedDeliveryOption === 'Order online & collect in store'
+      ? 'Address'
+      : 'Shipping Address';
+    const mapTitle = this.props.selectedDeliveryOption === 'Order online & collect in store'
+      ? { title: 'FG Halladeys & Sons', subtitle: 'supplier' }
+      : { title: 'Shipping Address', subtitle: 'location' };
     return (
       <NavBarContainer
         leftItem={leftItem}
@@ -123,13 +121,17 @@ class ConfirmationView extends Component {
               style={styles.header}
             >Order placed successfully</Text>
             <Text
-              style={stylesDescription}
+              style={styles.description}
             >{description}</Text>
-            {
-              map
-            }
+            <Map
+              latitude={this.props.addressLocation.latitude}
+              longitude={this.props.addressLocation.longitude}
+              subtitle={mapTitle.subtitle}
+              title={mapTitle.title}
+            />
             <BLButton
               onPress={() => {
+                this.props.clearBasket();
                 const { navigator } = this.props;
                 if (navigator) {
                   requestAnimationFrame(() => {
@@ -153,7 +155,7 @@ class ConfirmationView extends Component {
             >{ deliveryCollectionTitle }</Text>
             <Text
               style={styles.subHeading}
-            >Address</Text>
+            >{addressTitle}</Text>
             <Text
               style={styles.description}
             >{displayAddress(this.props.companyName, this.props.address)}</Text>
@@ -172,6 +174,7 @@ ConfirmationView.displayName = 'ConfirmationView';
 ConfirmationView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
   address: PropTypes.object.isRequired,
+  addressLocation: PropTypes.object.isRequired,
   clearBasket: PropTypes.func,
   companyName: PropTypes.string,
   navigator: PropTypes.object.isRequired,
@@ -184,7 +187,8 @@ export default connect((state, ownProps) => {
     navigator: ownProps.navigator,
     selectedDeliveryOption: state.checkout.selectedDeliveryOption,
     companyName: state.checkout.companyName,
-    address: state.checkout.address
+    address: state.checkout.address,
+    addressLocation: state.checkout.addressLocation
   };
 }, (dispatch) => {
   return {

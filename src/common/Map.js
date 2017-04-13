@@ -10,28 +10,22 @@ import MapView from 'react-native-maps';
 const { width, height } = Dimensions.get('window');
 
 const ASPECT_RATIO = width / height;
-const LATITUDE = 51.5639151;
-const LONGITUDE = -0.024304;
 const LATITUDE_DELTA = 0.0692;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-const TITLE = 'FG Halladeys & Sons';
-const SUBTITLE = 'supplier';
 
-const region = {
-  latitude: LATITUDE,
-  longitude: LONGITUDE,
-  latitudeDelta: LATITUDE_DELTA,
-  longitudeDelta: LONGITUDE_DELTA,
-};
-
-const annotations = {
-  latitude: LATITUDE,
-  longitude: LONGITUDE,
-  title: TITLE,
-  subtitle: SUBTITLE
-};
-
-const Map = () => {
+const Map = (props) => {
+  const region = {
+    latitude: props.latitude,
+    longitude: props.longitude,
+    latitudeDelta: LATITUDE_DELTA,
+    longitudeDelta: LONGITUDE_DELTA,
+  };
+  const annotations = {
+    latitude: props.latitude,
+    longitude: props.longitude,
+    title: props.title,
+    subtitle: props.subtitle
+  };
   return (
     <MapView
       annotations={[annotations]}
@@ -40,17 +34,31 @@ const Map = () => {
     >
       <MapView.Marker
         coordinate={{
-          latitude: LATITUDE,
-          longitude: LONGITUDE,
+          latitude: props.latitude,
+          longitude: props.longitude,
         }}
-        description={SUBTITLE}
-        title={TITLE}
+        description={props.subtitle}
+        title={props.title}
       />
     </MapView>
   );
 };
 
 Map.displayName = 'Map';
+
+Map.defaultProps = {
+  title: 'FG Halladeys & Sons',
+  subtitle: 'supplier',
+  latitude: 51.5639151,
+  longitude: -0.024304
+};
+
+Map.propTypes = {
+  title: React.PropTypes.string,
+  subtitle: React.PropTypes.string,
+  latitude: React.PropTypes.number,
+  longitude: React.PropTypes.number
+};
 
 const styles = StyleSheet.create({
   map: {

@@ -1,11 +1,13 @@
 import ActionTypes from './types';
 import createAction from './createAction';
+import API from '../api';
 
 const addProdct = createAction(ActionTypes.ADD_PRODUCT);
 const removeProdct = createAction(ActionTypes.REMOVE_PRODUCT);
 const selectProdct = createAction(ActionTypes.SELECT_PRODUCT);
 const clearBkt = createAction(ActionTypes.CLEAR_BASKET);
 const selectDvlryOption = createAction(ActionTypes.SELECT_DELIVERY_OPTION);
+const setAddressLocation = createAction(ActionTypes.SET_ADDRESS_LOCATION);
 
 export const addProduct = (product) => {
   return (dispatch) => {
@@ -47,6 +49,13 @@ export const selectDeliveryOption = (deliveryOption) => {
       companyName,
       address
     }));
+    API.getLocationDetails(address.postalCode)
+      .then((addressLocation) => {
+        dispatch(setAddressLocation(addressLocation));
+      })
+      .catch((err) => {
+        console.log('error getting address location', err);
+      });
   };
 };
 
