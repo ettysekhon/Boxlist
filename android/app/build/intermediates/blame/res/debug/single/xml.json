@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/sekhoe01/rockstar/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.34.0/res/xml/preferences.xml"
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.41.2/res/xml/preferences.xml"
     }
 ]

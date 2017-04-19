@@ -1,13 +1,14 @@
 import React from 'react';
 
 import {
-  StyleSheet,
   Text,
   View,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import {
+  create,
+} from './StyleSheet';
 import fonts from '../styles/fonts';
 import colors from '../styles/colors';
 
@@ -26,11 +27,16 @@ const NavBarBackButton = (props) => {
     </View>);
 };
 
-const styles = StyleSheet.create({
+const styles = create({
   leftItem: {
     flexDirection: 'row',
     alignSelf: 'flex-start',
     paddingLeft: 15
+  },
+  icon: {
+    android: {
+      marginTop: 1
+    }
   },
   leftText: {
     fontSize: fonts.size.s,

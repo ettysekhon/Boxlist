@@ -49,13 +49,15 @@ export const selectDeliveryOption = (deliveryOption) => {
       companyName,
       address
     }));
-    API.getLocationDetails(address.postalCode)
-      .then((addressLocation) => {
-        dispatch(setAddressLocation(addressLocation));
-      })
-      .catch((err) => {
-        console.log('error getting address location', err);
-      });
+    if (address.postalCode) {
+      API.getLocationDetails(address.postalCode)
+        .then((addressLocation) => {
+          dispatch(setAddressLocation(addressLocation));
+        })
+        .catch((err) => {
+          console.log('error getting address location', err);
+        });
+    }
   };
 };
 

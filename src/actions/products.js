@@ -14,15 +14,13 @@ const loadProducts = (page, category, query) => {
     // get some initial state from storage
     getItem('APP_STATE')
       .then((item) => {
-        let appState = {
+        const appState = {
           account: null
         };
         if (item) {
-          appState = JSON.parse(item);
+          appState.account = JSON.parse(item);
         }
-        dispatch(appBootstrap({
-          account: appState
-        }));
+        dispatch(appBootstrap(appState));
         API.loadProducts(page, category, query)
         .then((payload) => {
           dispatch(productsSuccess({

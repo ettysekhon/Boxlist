@@ -68,7 +68,7 @@ class RegisterView extends Component {
     let county = '';
     let postalCode = '';
     let phoneNumber = '';
-    if (props.account) {
+    if (props.account !== null) {
       fullName = props.account.fullName;
       emailAddress = props.account.emailAddress;
       companyName = props.account.companyName;
@@ -274,7 +274,7 @@ RegisterView.displayName = 'RegisterView';
 
 RegisterView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
-  account: PropTypes.object.isRequired,
+  account: PropTypes.object,
   navigator: PropTypes.object.isRequired,
   /* eslint-enable react/forbid-prop-types */
   setAccount: PropTypes.func.isRequired

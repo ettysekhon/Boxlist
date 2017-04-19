@@ -4,39 +4,19 @@ import React, {
 } from 'react';
 
 import {
-  ActivityIndicatorIOS,
+  ActivityIndicator,
   Platform,
-  ProgressBarAndroid,
   StyleSheet,
   Text,
-  TouchableNativeFeedback,
   TouchableOpacity,
   View
 } from 'react-native';
 
 class Button extends Component {
-  renderInnerTextAndroid() {
+  renderInnerText() {
     if (this.props.isLoading) {
       return (
-        <ProgressBarAndroid
-          color={this.props.activityIndicatorColor || 'black'}
-          style={[{
-            height: 20,
-          }, styles.spinner]}
-          styleAttr={'Inverse'}
-        />
-      );
-    }
-    return (
-      <Text style={[styles.textButton, this.props.textStyle]}>
-        {this.props.children}
-      </Text>
-    );
-  }
-  renderInnerTextiOS() {
-    if (this.props.isLoading) {
-      return (
-        <ActivityIndicatorIOS
+        <ActivityIndicator
           animating
           color={this.props.activityIndicatorColor || 'black'}
           size={'small'}
@@ -49,12 +29,6 @@ class Button extends Component {
         {this.props.children}
       </Text>
     );
-  }
-  renderInnerText() {
-    if (Button.isAndroid) {
-      return this.renderInnerTextAndroid();
-    }
-    return this.renderInnerTextiOS();
   }
   render() {
     if (this.props.isDisabled === true || this.props.isLoading === true) {
@@ -69,33 +43,19 @@ class Button extends Component {
       );
     }
     // Extract Touchable props
-    let touchableProps = {
+    const touchableProps = {
       activeOpacity: this.props.isDisabled ? 1 : 0.7,
       onPress: !this.props.isDisabled && this.props.onPress,
       onPressIn: this.props.onPressIn,
       onPressOut: this.props.onPressOut,
       onLongPress: this.props.onLongPress
     };
-    if (Button.isAndroid) {
-      touchableProps = Object.assign(touchableProps, {
-          /* eslint-disable new-cap */
-        background: this.props.background || TouchableNativeFeedback.SelectableBackground()
-        /* eslint-enable new-cap */
-      });
-      return (
-        <TouchableNativeFeedback {...touchableProps}>
-          <Text style={[styles.button, this.props.style]}>
-            {this.renderInnerTextAndroid()}
-          </Text>
-        </TouchableNativeFeedback>
-      );
-    }
     return (
       <TouchableOpacity
         {...touchableProps}
         style={[styles.button, this.props.style]}
       >
-        {this.renderInnerTextiOS()}
+        {this.renderInnerText()}
       </TouchableOpacity>
     );
   }
@@ -105,9 +65,6 @@ Button.displayName = 'Button';
 
 Button.propTypes = {
   activityIndicatorColor: PropTypes.string,
-  background: (TouchableNativeFeedback.propTypes)
-    ? TouchableNativeFeedback.propTypes.background
-    : PropTypes.any,
   children: PropTypes.string.isRequired,
   disabledStyle: Text.propTypes.style,
   isDisabled: PropTypes.bool,

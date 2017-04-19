@@ -3,10 +3,13 @@ import React, {
 } from 'react';
 
 import {
-  StyleSheet,
   Text,
   View
 } from 'react-native';
+
+import {
+  create,
+} from './StyleSheet';
 
 import HeaderItem from './HeaderItem';
 
@@ -49,7 +52,7 @@ Header.propTypes = {
   title: PropTypes.string
 };
 
-const styles = StyleSheet.create({
+const styles = create({
   container: {
     backgroundColor: colors.dark.backgroundColor,
     paddingTop: 23,
@@ -70,7 +73,9 @@ const styles = StyleSheet.create({
   centerItem: {
     flex: 2,
     height: 61,
-    marginTop: -3,
+    ios: {
+      marginTop: -3
+    },
     alignItems: 'center',
     justifyContent: 'center'
   },

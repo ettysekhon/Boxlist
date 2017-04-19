@@ -26,7 +26,6 @@ export const SearchTextInput = ({ style, ...props }) => {
   };
   return (
     <RNTextInput
-      onLayout={() => { this.textInput.focus(); return; }}
       ref={(ref) => { this.textInput = ref; return; }}
       style={[styles.textInput, style]}
       {...props}
@@ -42,7 +41,7 @@ export const TextInput = ({ style, ...props }) => {
     keyboardType: 'default',
     autoCapitalize: 'none',
     placeholderTextColor: 'rgb(155,155,155)',
-    underlineColorAndroid: '#9013FE'
+    underlineColorAndroid: 'transparent'
   };
   return (
     <RNTextInput
