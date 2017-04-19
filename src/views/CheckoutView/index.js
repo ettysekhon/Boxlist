@@ -54,12 +54,19 @@ const getValidStatus = (state) => {
 class CheckoutView extends Component {
   constructor(props) {
     super(props);
-    const account = this.props.account;
+    let name = '';
+    let emailAddress = '';
+    let mobile = '';
+    if (props.account !== null) {
+      name = props.account.fullName;
+      emailAddress = props.account.emailAddress;
+      mobile = props.account.mobile;
+    }
     const state = {
-      emailAddress: account.emailAddress,
-      mobile: account.mobile,
+      emailAddress,
+      mobile,
       message: '',
-      name: account.fullName,
+      name,
       disabled: this.props.selectedDeliveryOption === 'Order online & collect in store',
       validEmail: true,
       validMobile: true
@@ -433,7 +440,7 @@ CheckoutView.displayName = 'CheckoutView';
 
 CheckoutView.propTypes = {
   /* eslint-disable react/forbid-prop-types */
-  account: PropTypes.object.isRequired,
+  account: PropTypes.object,
   address: PropTypes.object.isRequired,
   basketItems: PropTypes.array,
   basketTotal: PropTypes.string,
