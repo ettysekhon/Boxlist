@@ -79,10 +79,8 @@ export default create({
     fontSize: 14,
     color: 'rgb(155,155,155)',
     marginBottom: 5,
-    ios: {
-      borderWidth: 1,
-      borderColor: 'rgb(204,204,204)'
-    }
+    borderWidth: 1,
+    borderColor: 'rgb(204,204,204)'
   },
   textInput: {
     height: 44,
@@ -90,10 +88,8 @@ export default create({
     fontSize: 14,
     color: 'rgb(155,155,155)',
     marginBottom: 5,
-    ios: {
-      borderWidth: 1,
-      borderColor: 'rgb(204,204,204)'
-    }
+    borderWidth: 1,
+    borderColor: 'rgb(204,204,204)'
   },
   productTitle: {
     color: 'rgb(74,74,74)'
