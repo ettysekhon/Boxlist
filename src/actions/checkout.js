@@ -5,12 +5,14 @@ import ActionTypes from './types';
 import createAction from './createAction';
 import API from '../api';
 import constants from '../utils/constants';
+import { trackEvent } from '../common/Tracker';
 
 const placeOrderRequest = createAction(ActionTypes.PLACE_ORDER_REQUEST);
 const placeOrderSuccess = createAction(ActionTypes.PLACE_ORDER_SUCCESS);
 const placeOrderFailure = createAction(ActionTypes.PLACE_ORDER_FAILURE);
 
 const placeOrder = (order, navigator) => {
+  trackEvent('checkout', 'place order');
   return (dispatch) => {
     dispatch(placeOrderRequest(order));
     API.placeOrder(order)

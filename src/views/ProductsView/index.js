@@ -27,7 +27,6 @@ import {
   selectProduct
 } from '../../actions/basket';
 import loadProducts from '../../actions/products';
-import { trackScreenView } from '../../common/Tracker';
 
 import constants from '../../utils/constants';
 import styles from './styles';
@@ -38,7 +37,6 @@ class ProductsView extends Component {
     this.renderRow = this.renderRow.bind(this);
   }
   componentDidMount() {
-    trackScreenView('ProductsView');
     InteractionManager.runAfterInteractions(() => {
       this.props.loadProducts(0, '', '');
     });

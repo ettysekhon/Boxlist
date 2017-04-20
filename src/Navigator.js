@@ -20,6 +20,7 @@ import FilterView from './views/FilterView';
 import RegisterView from './views/RegisterView';
 
 import constants from './utils/constants';
+import { trackScreenView } from './common/Tracker';
 
 // TODO: refactor navigator
 const configureRoute = (route) => {
@@ -35,36 +36,42 @@ const configureRoute = (route) => {
 const renderRoute = (route, navigator) => {
   switch (route.route) {
   case constants.routes.CONFIRMATION:
+    trackScreenView('ConfirmationView');
     return (
       <ConfirmationView
         navigator={navigator}
       />
     );
   case constants.routes.SUPPLIER:
+    trackScreenView('SupplierView');
     return (
       <SupplierView
         navigator={navigator}
       />
     );
   case constants.routes.BASKET:
+    trackScreenView('BasketView');
     return (
       <BasketView
         navigator={navigator}
       />
     );
   case constants.routes.CHECKOUT:
+    trackScreenView('CheckoutView');
     return (
       <CheckoutView
         navigator={navigator}
       />
     );
   case constants.routes.PRODUCT:
+    trackScreenView('ProductView');
     return (
       <ProductView
         navigator={navigator}
       />
     );
   case constants.routes.CATEGORY:
+    trackScreenView('CategoryView');
     return (
       <CategoryView
         category={route.category}
@@ -72,24 +79,28 @@ const renderRoute = (route, navigator) => {
       />
     );
   case constants.routes.FILTER:
+    trackScreenView('FilterView');
     return (
       <FilterView
         navigator={navigator}
       />
     );
   case constants.routes.REGISTER:
+    trackScreenView('RegisterView');
     return (
       <RegisterView
         navigator={navigator}
       />
     );
   case constants.routes.PRODUCTS:
+    trackScreenView('ProductsView');
     return (
       <ProductsView
         navigator={navigator}
       />
     );
   default:
+    trackScreenView('ProductsView');
     return (
       <ProductsView
         navigator={navigator}

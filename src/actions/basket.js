@@ -1,6 +1,7 @@
 import ActionTypes from './types';
 import createAction from './createAction';
 import API from '../api';
+import { trackEvent } from '../common/Tracker';
 
 const addProdct = createAction(ActionTypes.ADD_PRODUCT);
 const removeProdct = createAction(ActionTypes.REMOVE_PRODUCT);
@@ -10,6 +11,7 @@ const selectDvlryOption = createAction(ActionTypes.SELECT_DELIVERY_OPTION);
 const setAddressLocation = createAction(ActionTypes.SET_ADDRESS_LOCATION);
 
 export const addProduct = (product) => {
+  trackEvent('basket', 'add');
   return (dispatch) => {
     dispatch(addProdct({
       product
@@ -18,6 +20,7 @@ export const addProduct = (product) => {
 };
 
 export const selectDeliveryOption = (deliveryOption) => {
+  trackEvent('basket', `select delivery option: ${deliveryOption}`);
   return (dispatch, getState) => {
     let companyName = '';
     let address = {
@@ -62,12 +65,14 @@ export const selectDeliveryOption = (deliveryOption) => {
 };
 
 export const clearBasket = () => {
+  trackEvent('basket', 'clear');
   return (dispatch) => {
     dispatch(clearBkt());
   };
 };
 
 export const removeProduct = (product) => {
+  trackEvent('basket', 'remove product');
   return (dispatch) => {
     dispatch(removeProdct({
       product
@@ -76,6 +81,7 @@ export const removeProduct = (product) => {
 };
 
 export const selectProduct = (product) => {
+  trackEvent('basket', 'select product');
   return (dispatch) => {
     dispatch(selectProdct({
       product

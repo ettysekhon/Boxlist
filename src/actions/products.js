@@ -2,6 +2,7 @@ import ActionTypes from './types';
 import createAction from './createAction';
 import API from '../api';
 import { getItem } from '../utils/storage';
+import { trackEvent } from '../common/Tracker';
 
 const appBootstrap = createAction(ActionTypes.APP_BOOTSTRAP);
 const productsRequest = createAction(ActionTypes.PRODUCTS_REQUEST);
@@ -9,6 +10,7 @@ const productsSuccess = createAction(ActionTypes.PRODUCTS_SUCCESS);
 const productsFailure = createAction(ActionTypes.PRODUCTS_FAILURE);
 
 const loadProducts = (page, category, query) => {
+  trackEvent('search', `category: ${category}, query: ${query}, page: ${page}`);
   return (dispatch) => {
     dispatch(productsRequest());
     // get some initial state from storage

@@ -2,6 +2,7 @@ import ActionTypes from './types';
 import createAction from './createAction';
 import constants from '../utils/constants';
 import { setItem } from '../utils/storage';
+import { trackEvent } from '../common/Tracker';
 
 const setAccountDetails = createAction(ActionTypes.SET_ACCOUNT);
 const saveAppState = (state) => {
@@ -10,6 +11,7 @@ const saveAppState = (state) => {
 
 /* eslint-disable import/prefer-default-export */
 export const setAccount = (account, navigator) => {
+  trackEvent('account', 'set');
   return (dispatch) => {
     dispatch(setAccountDetails({
       account
