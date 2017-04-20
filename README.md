@@ -11,6 +11,9 @@ npm install --save react-native-google-analytics-bridge
 react-native link react-native-google-analytics-bridge
 ```
 
+boxlist.app@gmail.com
+xsBOXLIST123 or xsBOXLIST123!
+
 ## iOS only
 
 https://facebook.github.io/react-native/docs/linking-libraries-ios.html
