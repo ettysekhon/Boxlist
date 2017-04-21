@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-port/values-port.xml",
+                    "file": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/values-port/values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

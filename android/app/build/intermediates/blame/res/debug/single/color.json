@@ -1,50 +1,58 @@
 [
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_material_dark.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/color/common_google_signin_btn_text_dark.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_secondary_text_material_light.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_secondary_text_material_light.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_material_light.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/wallet_primary_text_holo_light.xml",
+        "source": "/Users/sekhoe01/.android/build-cache/fea3343602e095344da0433fb9044cf58606d278/output/res/color/wallet_primary_text_holo_light.xml"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",
+        "source": "/Users/sekhoe01/.android/build-cache/fea3343602e095344da0433fb9044cf58606d278/output/res/color/wallet_secondary_text_holo_dark.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_search_url_text.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_disable_only_material_light.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_secondary_text_material_dark.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/color/common_google_signin_btn_text_light.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/switch_thumb_material_dark.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/switch_thumb_material_dark.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/switch_thumb_material_light.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/color/switch_thumb_material_light.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/color/common_google_signin_btn_tint.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/color/common_google_signin_btn_tint.xml"
     }
 ]

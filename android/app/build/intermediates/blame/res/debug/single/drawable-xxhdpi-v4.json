@@ -1,26 +1,74 @@
 [
     {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_plusone_standard_off_client.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a95dd9b3dbdd43644a8b286013128a3763035d71/output/res/drawable-xxhdpi-v4/ic_plusone_standard_off_client.png"
+    },
+    {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/cast_ic_notification_on.png",
+        "source": "/Users/sekhoe01/.android/build-cache/75f752942d5da884dc5789eaaf5fd1440db70cfb/output/res/drawable-xxhdpi-v4/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/places_ic_clear.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a0ea03e06e42a4de747222b90d9516859bb6e2c4/output/res/drawable-xxhdpi-v4/places_ic_clear.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/places_ic_search.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a0ea03e06e42a4de747222b90d9516859bb6e2c4/output/res/drawable-xxhdpi-v4/places_ic_search.png"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/cast_ic_notification_0.png",
+        "source": "/Users/sekhoe01/.android/build-cache/75f752942d5da884dc5789eaaf5fd1440db70cfb/output/res/drawable-xxhdpi-v4/cast_ic_notification_0.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/powered_by_google_dark.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a0ea03e06e42a4de747222b90d9516859bb6e2c4/output/res/drawable-xxhdpi-v4/powered_by_google_dark.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/powered_by_google_light.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a0ea03e06e42a4de747222b90d9516859bb6e2c4/output/res/drawable-xxhdpi-v4/powered_by_google_light.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/cast_ic_notification_2.png",
+        "source": "/Users/sekhoe01/.android/build-cache/75f752942d5da884dc5789eaaf5fd1440db70cfb/output/res/drawable-xxhdpi-v4/cast_ic_notification_2.png"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/googleg_disabled_color_18.png",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_plusone_medium_off_client.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a95dd9b3dbdd43644a8b286013128a3763035d71/output/res/drawable-xxhdpi-v4/ic_plusone_medium_off_client.png"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/googleg_standard_color_18.png",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
+        "source": "/Users/sekhoe01/.android/build-cache/56f9874e7a00725d25866711325db9ae9ca10f19/output/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/cast_ic_notification_1.png",
+        "source": "/Users/sekhoe01/.android/build-cache/75f752942d5da884dc5789eaaf5fd1440db70cfb/output/res/drawable-xxhdpi-v4/cast_ic_notification_1.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_plusone_small_off_client.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a95dd9b3dbdd43644a8b286013128a3763035d71/output/res/drawable-xxhdpi-v4/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_plusone_tall_off_client.png",
+        "source": "/Users/sekhoe01/.android/build-cache/a95dd9b3dbdd43644a8b286013128a3763035d71/output/res/drawable-xxhdpi-v4/ic_plusone_tall_off_client.png"
     }
 ]

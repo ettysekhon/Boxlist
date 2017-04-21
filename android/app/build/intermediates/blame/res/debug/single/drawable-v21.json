@@ -1,10 +1,10 @@
 [
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-v21/abc_action_bar_item_background_material.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
         "merged": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
-        "source": "/Users/sekhoe01/develop/react-native-projects/Boxlist/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-v21/abc_btn_colored_material.xml"
+        "source": "/Users/sekhoe01/.android/build-cache/aa7a8948a179aa73fe1ae68852069650971aa86b/output/res/drawable-v21/abc_btn_colored_material.xml"
     }
 ]
